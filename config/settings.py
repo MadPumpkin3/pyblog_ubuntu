@@ -11,10 +11,11 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-TEMPLATES_DIR = BASE_DIR / 'myapp/templates'
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'staticfiles/templates')
 
 
 # Quick-start development settings - unsuitable for production
@@ -82,7 +83,7 @@ DATABASES = {
         'USER': 'pyblog2',
         'PASSWORD': '2150',
         # 현재 호스트(IP)가 유동 IP라서 AWS 재시동시 수정해야 함.
-        'HOST': '43.201.48.204',
+        'HOST': '3.35.235.165',
         'PORT': '3306',
     }
 }
@@ -123,7 +124,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [BASE_DIR, 'myapp/static']
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

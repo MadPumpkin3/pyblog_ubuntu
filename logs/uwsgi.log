@@ -1,0 +1,832 @@
+*** Starting uWSGI 2.0.23 (64bit) on [Fri Feb  2 08:20:50 2024] ***
+compiled with version: 11.4.0 on 29 January 2024 08:02:47
+os: Linux-6.2.0-1018-aws #18~22.04.1-Ubuntu SMP Wed Jan 10 22:54:16 UTC 2024
+nodename: ip-172-31-2-169
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/PYTHONBLOG/Pyblog
+detected binary path: /home/ubuntu/pyblog/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/ubuntu/PYTHONBLOG/Pyblog
+your processes number limit is 3738
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on :80 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:43593 (port auto-assigned) fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+PEP 405 virtualenv detected: /home/ubuntu/pyblog
+Set PythonHome to /home/ubuntu/pyblog
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55a78d33c820
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55a78d33c820 pid: 1683 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1683)
+spawned uWSGI worker 1 (pid: 1684, cores: 1)
+spawned uWSGI worker 2 (pid: 1685, cores: 1)
+spawned uWSGI worker 3 (pid: 1686, cores: 1)
+spawned uWSGI worker 4 (pid: 1687, cores: 1)
+spawned uWSGI worker 5 (pid: 1688, cores: 1)
+spawned uWSGI http 1 (pid: 1689)
+[pid: 1686|app: 0|req: 1/1] 211.118.99.10 () {36 vars in 713 bytes} [Fri Feb  2 17:21:19 2024] GET /index.do => generated 210 bytes in 48 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 0)
+Not Found: /
+[pid: 1688|app: 0|req: 1/2] 211.118.99.10 () {36 vars in 697 bytes} [Fri Feb  2 17:29:46 2024] GET / => generated 2227 bytes in 119 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 1688|app: 0|req: 2/3] 211.118.99.10 () {38 vars in 728 bytes} [Fri Feb  2 17:30:50 2024] GET / => generated 2227 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: 'ip-172-31-2-169'. You may need to add 'ip-172-31-2-169' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/utils/deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/http/request.py", line 148, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'ip-172-31-2-169'. You may need to add 'ip-172-31-2-169' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 1688|app: 0|req: 3/4] 139.162.84.205 () {26 vars in 363 bytes} [Fri Feb  2 17:43:41 2024] GET / => generated 56428 bytes in 69 msecs (HTTP/1.0 400) 4 headers in 172 bytes (1 switches on core 0)
+gateway "uWSGI http 1" has been buried (pid: 1689)
+...brutally killing workers...
+Gracefully killing worker 3 (pid: 1686)...
+Gracefully killing worker 4 (pid: 1687)...
+Gracefully killing worker 2 (pid: 1685)...
+Gracefully killing worker 1 (pid: 1684)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/ubuntu/PYTHONBLOG/Pyblog
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (127.0.0.1:43593)
+running /home/ubuntu/pyblog/bin/uwsgi
+[uWSGI] getting INI configuration from pythonblog_uwsgi.ini
+*** Starting uWSGI 2.0.23 (64bit) on [Fri Feb  2 17:43:50 2024] ***
+compiled with version: 11.4.0 on 29 January 2024 08:02:47
+os: Linux-6.2.0-1018-aws #18~22.04.1-Ubuntu SMP Wed Jan 10 22:54:16 UTC 2024
+nodename: ip-172-31-2-169
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/PYTHONBLOG/Pyblog
+detected binary path: /home/ubuntu/pyblog/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/ubuntu/PYTHONBLOG/Pyblog
+your processes number limit is 3738
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on :80 fd 5
+uwsgi socket 0 bound to TCP address 127.0.0.1:43049 (port auto-assigned) fd 4
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+PEP 405 virtualenv detected: /home/ubuntu/pyblog
+Set PythonHome to /home/ubuntu/pyblog
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x557014c417e0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x557014c417e0 pid: 1683 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1683)
+spawned uWSGI worker 1 (pid: 3079, cores: 1)
+spawned uWSGI worker 2 (pid: 3080, cores: 1)
+spawned uWSGI worker 3 (pid: 3081, cores: 1)
+spawned uWSGI worker 4 (pid: 3082, cores: 1)
+spawned uWSGI worker 5 (pid: 3083, cores: 1)
+spawned uWSGI http 1 (pid: 3084)
+Fri Feb  2 17:45:19 2024 - uWSGI worker 5 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Fri Feb  2 17:45:19 2024 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.23 (64bit) on [Mon Feb  5 08:00:08 2024] ***
+compiled with version: 11.4.0 on 29 January 2024 08:02:47
+os: Linux-6.2.0-1018-aws #18~22.04.1-Ubuntu SMP Wed Jan 10 22:54:16 UTC 2024
+nodename: ip-172-31-2-169
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/PYTHONBLOG/Pyblog
+detected binary path: /home/ubuntu/pyblog/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/PYTHONBLOG/Pyblog
+your processes number limit is 3738
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/PYTHONBLOG/Pyblog/config/pythonblog.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+PEP 405 virtualenv detected: /home/ubuntu/pyblog
+Set PythonHome to /home/ubuntu/pyblog
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55fa5699d480
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55fa5699d480 pid: 2939 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 2939)
+spawned uWSGI worker 1 (pid: 2940, cores: 1)
+spawned uWSGI worker 2 (pid: 2941, cores: 1)
+spawned uWSGI worker 3 (pid: 2942, cores: 1)
+spawned uWSGI worker 4 (pid: 2943, cores: 1)
+spawned uWSGI worker 5 (pid: 2944, cores: 1)
+Mon Feb  5 17:00:59 2024 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon Feb  5 17:00:59 2024 - uWSGI worker 5 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon Feb  5 17:00:59 2024 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon Feb  5 17:00:59 2024 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon Feb  5 17:00:59 2024 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.23 (64bit) on [Mon Feb  5 08:01:13 2024] ***
+compiled with version: 11.4.0 on 29 January 2024 08:02:47
+os: Linux-6.2.0-1018-aws #18~22.04.1-Ubuntu SMP Wed Jan 10 22:54:16 UTC 2024
+nodename: ip-172-31-2-169
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/PYTHONBLOG/Pyblog
+detected binary path: /home/ubuntu/pyblog/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/PYTHONBLOG/Pyblog
+your processes number limit is 3738
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/PYTHONBLOG/Pyblog/config/pythonblog.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+PEP 405 virtualenv detected: /home/ubuntu/pyblog
+Set PythonHome to /home/ubuntu/pyblog
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55f95855b480
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55f95855b480 pid: 2950 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 2950)
+spawned uWSGI worker 1 (pid: 2951, cores: 1)
+spawned uWSGI worker 2 (pid: 2952, cores: 1)
+spawned uWSGI worker 3 (pid: 2953, cores: 1)
+spawned uWSGI worker 4 (pid: 2954, cores: 1)
+spawned uWSGI worker 5 (pid: 2955, cores: 1)
+*** Starting uWSGI 2.0.23 (64bit) on [Mon Feb  5 08:02:53 2024] ***
+compiled with version: 11.4.0 on 29 January 2024 08:02:47
+os: Linux-6.2.0-1018-aws #18~22.04.1-Ubuntu SMP Wed Jan 10 22:54:16 UTC 2024
+nodename: ip-172-31-2-169
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/PYTHONBLOG/Pyblog
+detected binary path: /home/ubuntu/pyblog/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/PYTHONBLOG/Pyblog
+your processes number limit is 3738
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/PYTHONBLOG/Pyblog/config/pythonblog.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+PEP 405 virtualenv detected: /home/ubuntu/pyblog
+Set PythonHome to /home/ubuntu/pyblog
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55ed9fa47480
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55ed9fa47480 pid: 2961 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 2961)
+spawned uWSGI worker 1 (pid: 2962, cores: 1)
+spawned uWSGI worker 2 (pid: 2963, cores: 1)
+spawned uWSGI worker 3 (pid: 2964, cores: 1)
+spawned uWSGI worker 4 (pid: 2965, cores: 1)
+spawned uWSGI worker 5 (pid: 2966, cores: 1)
+*** Starting uWSGI 2.0.23 (64bit) on [Mon Feb  5 08:04:09 2024] ***
+compiled with version: 11.4.0 on 29 January 2024 08:02:47
+os: Linux-6.2.0-1018-aws #18~22.04.1-Ubuntu SMP Wed Jan 10 22:54:16 UTC 2024
+nodename: ip-172-31-2-169
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/PYTHONBLOG/Pyblog
+detected binary path: /home/ubuntu/pyblog/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/PYTHONBLOG/Pyblog
+your processes number limit is 3738
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on :80 fd 3
+uwsgi socket 0 bound to UNIX address /home/ubuntu/PYTHONBLOG/Pyblog/config/pythonblog.sock fd 6
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+PEP 405 virtualenv detected: /home/ubuntu/pyblog
+Set PythonHome to /home/ubuntu/pyblog
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5638ae0a1570
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5638ae0a1570 pid: 2970 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 2970)
+spawned uWSGI worker 1 (pid: 2971, cores: 1)
+spawned uWSGI worker 2 (pid: 2972, cores: 1)
+spawned uWSGI worker 3 (pid: 2973, cores: 1)
+spawned uWSGI worker 4 (pid: 2974, cores: 1)
+spawned uWSGI worker 5 (pid: 2975, cores: 1)
+spawned uWSGI http 1 (pid: 2976)
+[pid: 2972|app: 0|req: 1/1] 211.118.99.10 () {38 vars in 743 bytes} [Mon Feb  5 17:04:13 2024] GET /index.do => generated 210 bytes in 385 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 0)
+Mon Feb  5 17:17:20 2024 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon Feb  5 17:17:20 2024 - uWSGI worker 5 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon Feb  5 17:17:20 2024 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon Feb  5 17:17:20 2024 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon Feb  5 17:17:20 2024 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon Feb  5 17:17:20 2024 - uWSGI worker 5 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon Feb  5 17:17:20 2024 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon Feb  5 17:17:20 2024 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon Feb  5 17:17:20 2024 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon Feb  5 17:17:20 2024 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon Feb  5 17:17:20 2024 - uWSGI worker 5 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon Feb  5 17:17:20 2024 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon Feb  5 17:17:20 2024 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon Feb  5 17:17:20 2024 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon Feb  5 17:17:20 2024 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.23 (64bit) on [Mon Feb  5 08:18:31 2024] ***
+compiled with version: 11.4.0 on 29 January 2024 08:02:47
+os: Linux-6.2.0-1018-aws #18~22.04.1-Ubuntu SMP Wed Jan 10 22:54:16 UTC 2024
+nodename: ip-172-31-2-169
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/PYTHONBLOG/Pyblog
+detected binary path: /home/ubuntu/pyblog/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/PYTHONBLOG/Pyblog
+your processes number limit is 3738
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/PYTHONBLOG/Pyblog/config/pythonblog.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+PEP 405 virtualenv detected: /home/ubuntu/pyblog
+Set PythonHome to /home/ubuntu/pyblog
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55a4d2b09480
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55a4d2b09480 pid: 3063 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 3063)
+spawned uWSGI worker 1 (pid: 3064, cores: 1)
+spawned uWSGI worker 2 (pid: 3065, cores: 1)
+spawned uWSGI worker 3 (pid: 3066, cores: 1)
+spawned uWSGI worker 4 (pid: 3067, cores: 1)
+spawned uWSGI worker 5 (pid: 3068, cores: 1)
+Invalid HTTP_HOST header: '_'. The domain name provided is not valid according to RFC 1034/1035.
+Traceback (most recent call last):
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/utils/deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/http/request.py", line 148, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '_'. The domain name provided is not valid according to RFC 1034/1035.
+Bad Request: /
+[pid: 3067|app: 0|req: 1/1] 139.162.84.205 () {30 vars in 400 bytes} [Mon Feb  5 17:44:31 2024] GET / => generated 56668 bytes in 83 msecs (HTTP/1.0 400) 4 headers in 172 bytes (1 switches on core 0)
+...brutally killing workers...
+Gracefully killing worker 1 (pid: 3064)...
+Gracefully killing worker 2 (pid: 3065)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/ubuntu/PYTHONBLOG/Pyblog
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/home/ubuntu/PYTHONBLOG/Pyblog/config/pythonblog.sock)
+running /home/ubuntu/pyblog/bin/uwsgi
+[uWSGI] getting INI configuration from pythonblog_uwsgi.ini
+*** Starting uWSGI 2.0.23 (64bit) on [Mon Feb  5 17:51:01 2024] ***
+compiled with version: 11.4.0 on 29 January 2024 08:02:47
+os: Linux-6.2.0-1018-aws #18~22.04.1-Ubuntu SMP Wed Jan 10 22:54:16 UTC 2024
+nodename: ip-172-31-2-169
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/PYTHONBLOG/Pyblog
+detected binary path: /home/ubuntu/pyblog/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/PYTHONBLOG/Pyblog
+your processes number limit is 3738
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/PYTHONBLOG/Pyblog/config/nginx/pythonblog.sock fd 3
+setgid() to 1000
+set additional group 4 (adm)
+set additional group 20 (dialout)
+set additional group 24 (cdrom)
+set additional group 25 (floppy)
+set additional group 27 (sudo)
+set additional group 29 (audio)
+set additional group 30 (dip)
+set additional group 44 (video)
+set additional group 46 (plugdev)
+set additional group 119 (netdev)
+set additional group 120 (lxd)
+setuid() to 1000
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+PEP 405 virtualenv detected: /home/ubuntu/pyblog
+Set PythonHome to /home/ubuntu/pyblog
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55d574f60700
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55d574f60700 pid: 3063 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 3063)
+spawned uWSGI worker 1 (pid: 3363, cores: 1)
+spawned uWSGI worker 2 (pid: 3364, cores: 1)
+spawned uWSGI worker 3 (pid: 3365, cores: 1)
+spawned uWSGI worker 4 (pid: 3366, cores: 1)
+spawned uWSGI worker 5 (pid: 3367, cores: 1)
+Mon Feb  5 17:52:30 2024 - uWSGI worker 5 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Mon Feb  5 17:52:30 2024 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.23 (64bit) on [Tue Feb  6 05:55:24 2024] ***
+compiled with version: 11.4.0 on 29 January 2024 08:02:47
+os: Linux-6.2.0-1018-aws #18~22.04.1-Ubuntu SMP Wed Jan 10 22:54:16 UTC 2024
+nodename: ip-172-31-2-169
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/PYTHONBLOG/Pyblog
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/PYTHONBLOG/Pyblog
+your processes number limit is 3738
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/PYTHONBLOG/Pyblog/config/nginx/pythonblog.sock fd 3
+setgid() to 1000
+set additional group 4 (adm)
+set additional group 20 (dialout)
+set additional group 24 (cdrom)
+set additional group 25 (floppy)
+set additional group 27 (sudo)
+set additional group 29 (audio)
+set additional group 30 (dip)
+set additional group 44 (video)
+set additional group 46 (plugdev)
+set additional group 119 (netdev)
+set additional group 120 (lxd)
+setuid() to 1000
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+PEP 405 virtualenv detected: /home/ubuntu/pyblog
+Set PythonHome to /home/ubuntu/pyblog
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x563bf77af540
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x563bf77af540 pid: 1362 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1362)
+spawned uWSGI worker 1 (pid: 1363, cores: 1)
+spawned uWSGI worker 2 (pid: 1364, cores: 1)
+spawned uWSGI worker 3 (pid: 1365, cores: 1)
+spawned uWSGI worker 4 (pid: 1366, cores: 1)
+spawned uWSGI worker 5 (pid: 1367, cores: 1)
+*** Starting uWSGI 2.0.23 (64bit) on [Tue Feb  6 06:06:59 2024] ***
+compiled with version: 11.4.0 on 29 January 2024 08:02:47
+os: Linux-6.2.0-1018-aws #18~22.04.1-Ubuntu SMP Wed Jan 10 22:54:16 UTC 2024
+nodename: ip-172-31-2-169
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/PYTHONBLOG/Pyblog
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/PYTHONBLOG/Pyblog
+your processes number limit is 3738
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (:80).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.23 (64bit) on [Tue Feb  6 06:07:57 2024] ***
+compiled with version: 11.4.0 on 29 January 2024 08:02:47
+os: Linux-6.2.0-1018-aws #18~22.04.1-Ubuntu SMP Wed Jan 10 22:54:16 UTC 2024
+nodename: ip-172-31-2-169
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/PYTHONBLOG/Pyblog
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/PYTHONBLOG/Pyblog
+your processes number limit is 3738
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on :80 fd 3
+uwsgi socket 0 bound to UNIX address /home/ubuntu/PYTHONBLOG/Pyblog/config/nginx/pythonblog.sock fd 6
+setgid() to 1000
+set additional group 4 (adm)
+set additional group 20 (dialout)
+set additional group 24 (cdrom)
+set additional group 25 (floppy)
+set additional group 27 (sudo)
+set additional group 29 (audio)
+set additional group 30 (dip)
+set additional group 44 (video)
+set additional group 46 (plugdev)
+set additional group 119 (netdev)
+set additional group 120 (lxd)
+setuid() to 1000
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+PEP 405 virtualenv detected: /home/ubuntu/pyblog
+Set PythonHome to /home/ubuntu/pyblog
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x56482980d650
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x56482980d650 pid: 1528 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1528)
+spawned uWSGI worker 1 (pid: 1529, cores: 1)
+spawned uWSGI worker 2 (pid: 1530, cores: 1)
+spawned uWSGI worker 3 (pid: 1531, cores: 1)
+spawned uWSGI worker 4 (pid: 1532, cores: 1)
+spawned uWSGI worker 5 (pid: 1533, cores: 1)
+spawned uWSGI http 1 (pid: 1534)
+[pid: 1531|app: 0|req: 1/1] 211.118.99.10 () {38 vars in 743 bytes} [Tue Feb  6 15:08:01 2024] GET /index.do => generated 210 bytes in 355 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.23 (64bit) on [Tue Feb  6 06:11:45 2024] ***
+compiled with version: 11.4.0 on 29 January 2024 08:02:47
+os: Linux-6.2.0-1018-aws #18~22.04.1-Ubuntu SMP Wed Jan 10 22:54:16 UTC 2024
+nodename: ip-172-31-2-169
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/PYTHONBLOG/Pyblog
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/PYTHONBLOG/Pyblog
+your processes number limit is 3738
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (:80).
+bind(): Address already in use [core/socket.c line 769]
+[pid: 1532|app: 0|req: 1/2] 211.118.99.10 () {38 vars in 743 bytes} [Tue Feb  6 15:11:49 2024] GET /index.do => generated 210 bytes in 50 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 0)
+Tue Feb  6 15:13:06 2024 - uWSGI worker 5 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Feb  6 15:13:06 2024 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Feb  6 15:13:06 2024 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Feb  6 15:13:06 2024 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Feb  6 15:13:06 2024 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Feb  6 15:13:06 2024 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Feb  6 15:13:06 2024 - uWSGI worker 5 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Feb  6 15:13:06 2024 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Feb  6 15:13:06 2024 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Feb  6 15:13:06 2024 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.23 (64bit) on [Tue Feb  6 06:55:54 2024] ***
+compiled with version: 11.4.0 on 29 January 2024 08:02:47
+os: Linux-6.2.0-1018-aws #18~22.04.1-Ubuntu SMP Wed Jan 10 22:54:16 UTC 2024
+nodename: ip-172-31-2-169
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/PYTHONBLOG/Pyblog
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/PYTHONBLOG/Pyblog
+your processes number limit is 3738
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/PYTHONBLOG/Pyblog/config/nginx/pythonblog.sock fd 3
+setgid() to 1000
+set additional group 4 (adm)
+set additional group 20 (dialout)
+set additional group 24 (cdrom)
+set additional group 25 (floppy)
+set additional group 27 (sudo)
+set additional group 29 (audio)
+set additional group 30 (dip)
+set additional group 44 (video)
+set additional group 46 (plugdev)
+set additional group 119 (netdev)
+set additional group 120 (lxd)
+setuid() to 1000
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+PEP 405 virtualenv detected: /home/ubuntu/pyblog
+Set PythonHome to /home/ubuntu/pyblog
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x560d5d9db550
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x560d5d9db550 pid: 1627 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1627)
+spawned uWSGI worker 1 (pid: 1628, cores: 1)
+spawned uWSGI worker 2 (pid: 1629, cores: 1)
+spawned uWSGI worker 3 (pid: 1630, cores: 1)
+spawned uWSGI worker 4 (pid: 1631, cores: 1)
+spawned uWSGI worker 5 (pid: 1632, cores: 1)
+*** Starting uWSGI 2.0.23 (64bit) on [Tue Feb  6 07:18:32 2024] ***
+compiled with version: 11.4.0 on 29 January 2024 08:02:47
+os: Linux-6.2.0-1018-aws #18~22.04.1-Ubuntu SMP Wed Jan 10 22:54:16 UTC 2024
+nodename: ip-172-31-2-169
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/PYTHONBLOG/Pyblog
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/PYTHONBLOG/Pyblog
+your processes number limit is 3738
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/PYTHONBLOG/Pyblog/config/nginx/pythonblog.sock fd 3
+setgid() to 1000
+set additional group 4 (adm)
+set additional group 20 (dialout)
+set additional group 24 (cdrom)
+set additional group 25 (floppy)
+set additional group 27 (sudo)
+set additional group 29 (audio)
+set additional group 30 (dip)
+set additional group 44 (video)
+set additional group 46 (plugdev)
+set additional group 119 (netdev)
+set additional group 120 (lxd)
+setuid() to 1000
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+PEP 405 virtualenv detected: /home/ubuntu/pyblog
+Set PythonHome to /home/ubuntu/pyblog
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55e132f95560
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55e132f95560 pid: 1699 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1699)
+spawned uWSGI worker 1 (pid: 1700, cores: 1)
+spawned uWSGI worker 2 (pid: 1701, cores: 1)
+spawned uWSGI worker 3 (pid: 1702, cores: 1)
+spawned uWSGI worker 4 (pid: 1703, cores: 1)
+spawned uWSGI worker 5 (pid: 1704, cores: 1)
+*** Starting uWSGI 2.0.23 (64bit) on [Tue Feb  6 07:19:53 2024] ***
+compiled with version: 11.4.0 on 29 January 2024 08:02:47
+os: Linux-6.2.0-1018-aws #18~22.04.1-Ubuntu SMP Wed Jan 10 22:54:16 UTC 2024
+nodename: ip-172-31-2-169
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/PYTHONBLOG/Pyblog
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/PYTHONBLOG/Pyblog
+your processes number limit is 3738
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/PYTHONBLOG/Pyblog/config/nginx/pythonblog.sock fd 3
+setgid() to 1000
+set additional group 4 (adm)
+set additional group 20 (dialout)
+set additional group 24 (cdrom)
+set additional group 25 (floppy)
+set additional group 27 (sudo)
+set additional group 29 (audio)
+set additional group 30 (dip)
+set additional group 44 (video)
+set additional group 46 (plugdev)
+set additional group 119 (netdev)
+set additional group 120 (lxd)
+setuid() to 1000
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+PEP 405 virtualenv detected: /home/ubuntu/pyblog
+Set PythonHome to /home/ubuntu/pyblog
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55f1bdad9560
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55f1bdad9560 pid: 1720 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1720)
+spawned uWSGI worker 1 (pid: 1721, cores: 1)
+spawned uWSGI worker 2 (pid: 1722, cores: 1)
+spawned uWSGI worker 3 (pid: 1723, cores: 1)
+spawned uWSGI worker 4 (pid: 1724, cores: 1)
+spawned uWSGI worker 5 (pid: 1725, cores: 1)
+Tue Feb  6 16:23:13 2024 - uWSGI worker 5 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.23 (64bit) on [Tue Feb  6 07:36:09 2024] ***
+compiled with version: 11.4.0 on 29 January 2024 08:02:47
+os: Linux-6.2.0-1018-aws #18~22.04.1-Ubuntu SMP Wed Jan 10 22:54:16 UTC 2024
+nodename: ip-172-31-2-169
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/PYTHONBLOG/Pyblog
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/PYTHONBLOG/Pyblog
+your processes number limit is 3738
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/PYTHONBLOG/Pyblog/config/nginx/pythonblog.sock fd 3
+setgid() to 1000
+set additional group 4 (adm)
+set additional group 20 (dialout)
+set additional group 24 (cdrom)
+set additional group 25 (floppy)
+set additional group 27 (sudo)
+set additional group 29 (audio)
+set additional group 30 (dip)
+set additional group 44 (video)
+set additional group 46 (plugdev)
+set additional group 119 (netdev)
+set additional group 120 (lxd)
+setuid() to 1000
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+PEP 405 virtualenv detected: /home/ubuntu/pyblog
+Set PythonHome to /home/ubuntu/pyblog
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5570e50fd560
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5570e50fd560 pid: 3193 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 3193)
+spawned uWSGI worker 1 (pid: 3194, cores: 1)
+spawned uWSGI worker 2 (pid: 3195, cores: 1)
+spawned uWSGI worker 3 (pid: 3196, cores: 1)
+spawned uWSGI worker 4 (pid: 3197, cores: 1)
+spawned uWSGI worker 5 (pid: 3198, cores: 1)
+*** Starting uWSGI 2.0.23 (64bit) on [Tue Feb  6 07:46:42 2024] ***
+compiled with version: 11.4.0 on 29 January 2024 08:02:47
+os: Linux-6.2.0-1018-aws #18~22.04.1-Ubuntu SMP Wed Jan 10 22:54:16 UTC 2024
+nodename: ip-172-31-2-169
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/PYTHONBLOG/Pyblog
+detected binary path: /home/ubuntu/pyblog/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/PYTHONBLOG/Pyblog
+your processes number limit is 3738
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on :80 fd 3
+uwsgi socket 0 bound to UNIX address /home/ubuntu/PYTHONBLOG/Pyblog/config/nginx/pythonblog.sock fd 6
+setgid() to 1000
+set additional group 4 (adm)
+set additional group 20 (dialout)
+set additional group 24 (cdrom)
+set additional group 25 (floppy)
+set additional group 27 (sudo)
+set additional group 29 (audio)
+set additional group 30 (dip)
+set additional group 44 (video)
+set additional group 46 (plugdev)
+set additional group 119 (netdev)
+set additional group 120 (lxd)
+setuid() to 1000
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+PEP 405 virtualenv detected: /home/ubuntu/pyblog
+Set PythonHome to /home/ubuntu/pyblog
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55f7b62ee700
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55f7b62ee700 pid: 3245 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 3245)
+spawned uWSGI worker 1 (pid: 3246, cores: 1)
+spawned uWSGI worker 2 (pid: 3247, cores: 1)
+spawned uWSGI worker 3 (pid: 3248, cores: 1)
+spawned uWSGI worker 4 (pid: 3249, cores: 1)
+spawned uWSGI worker 5 (pid: 3250, cores: 1)
+spawned uWSGI http 1 (pid: 3251)
+[pid: 3248|app: 0|req: 1/1] 211.118.99.10 () {36 vars in 711 bytes} [Tue Feb  6 16:46:45 2024] GET /index.do => generated 210 bytes in 329 msecs (HTTP/1.1 200) 6 headers in 207 bytes (2 switches on core 0)
+Not Found: /
+[pid: 3250|app: 0|req: 1/2] 192.241.206.18 () {30 vars in 337 bytes} [Tue Feb  6 17:07:06 2024] GET / => generated 2226 bytes in 36 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: 'ip-172-31-2-169'. You may need to add 'ip-172-31-2-169' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/utils/deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/http/request.py", line 148, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'ip-172-31-2-169'. You may need to add 'ip-172-31-2-169' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 3250|app: 0|req: 2/3] 139.162.84.205 () {26 vars in 363 bytes} [Tue Feb  6 17:37:44 2024] GET / => generated 56425 bytes in 66 msecs (HTTP/1.0 400) 4 headers in 172 bytes (1 switches on core 0)
+[uwsgi-http key: ip-172-31-2-169 client_addr: 139.162.84.205 client_port: 18670] hr_write(): Connection reset by peer [plugins/http/http.c line 565]
+Tue Feb  6 17:56:39 2024 - uWSGI worker 5 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Feb  6 17:56:39 2024 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Feb  6 17:56:39 2024 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Feb  6 17:56:39 2024 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Feb  6 17:56:39 2024 - uWSGI worker 5 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Feb  6 17:56:39 2024 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Feb  6 17:56:39 2024 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Feb  6 17:56:39 2024 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Feb  6 17:56:39 2024 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
