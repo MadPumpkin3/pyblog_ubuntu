@@ -1,0 +1,5 @@
+# 데이터베이스 연동 설정
+config/settings.py 에서 데이터베이스 호스트 수정
+
+# AWS 서버 접속 경로 설정
+config/real.py 에서 호스트 수정
