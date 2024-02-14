@@ -1,5 +1,5 @@
 # 데이터베이스 연동 설정
 config/settings.py 에서 데이터베이스 호스트 수정
 
-# AWS 서버 접속 경로 설정
+# AWS 서버 접속 경로 설정(도메인 적용시 ip말고 도메인'madblog.co.kr' 넣기)
 config/real.py 에서 호스트 수정

@@ -398,3 +398,165 @@ Not Found: /
 [pid: 1398|app: 0|req: 9/9] 185.254.196.173 () {40 vars in 611 bytes} [Tue Feb 13 18:09:42 2024] POST / => generated 2226 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
 Not Found: /Core/Skin/Login.aspx
 [pid: 1398|app: 0|req: 10/10] 150.109.159.4 () {42 vars in 773 bytes} [Tue Feb 13 18:26:52 2024] HEAD /Core/Skin/Login.aspx => generated 2307 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.23 (64bit) on [Wed Feb 14 08:20:42 2024] ***
+compiled with version: 11.4.0 on 29 January 2024 08:02:47
+os: Linux-6.2.0-1018-aws #18~22.04.1-Ubuntu SMP Wed Jan 10 22:54:16 UTC 2024
+nodename: ip-172-31-2-169
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /etc/uwsgi/sites
+writing pidfile to /tmp/project-master.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/ubuntu/PYTHONBLOG/Pyblog
+your processes number limit is 3738
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/PYTHONBLOG/Pyblog/uwsgi.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+PEP 405 virtualenv detected: /home/ubuntu/pyblog
+Set PythonHome to /home/ubuntu/pyblog
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55938c4700a0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 3 seconds on interpreter 0x55938c4700a0 pid: 395 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 395)
+spawned uWSGI worker 1 (pid: 618, cores: 1)
+SIGINT/SIGTERM received...killing workers...
+Wed Feb 14 17:24:26 2024 - received message 0 from emperor
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/ubuntu/PYTHONBLOG/Pyblog/uwsgi.sock removed.
+*** Starting uWSGI 2.0.23 (64bit) on [Wed Feb 14 08:24:29 2024] ***
+compiled with version: 11.4.0 on 29 January 2024 08:02:47
+os: Linux-6.2.0-1018-aws #18~22.04.1-Ubuntu SMP Wed Jan 10 22:54:16 UTC 2024
+nodename: ip-172-31-2-169
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /etc/uwsgi/sites
+writing pidfile to /tmp/project-master.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/ubuntu/PYTHONBLOG/Pyblog
+your processes number limit is 3738
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/PYTHONBLOG/Pyblog/uwsgi.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+PEP 405 virtualenv detected: /home/ubuntu/pyblog
+Set PythonHome to /home/ubuntu/pyblog
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x562c258590a0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x562c258590a0 pid: 909 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 909)
+spawned uWSGI worker 1 (pid: 910, cores: 1)
+[pid: 910|app: 0|req: 1/1] 220.126.59.229 () {40 vars in 750 bytes} [Wed Feb 14 17:25:14 2024] GET /index.do => generated 210 bytes in 106 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+Not Found: /favicon.ico
+[pid: 910|app: 0|req: 2/2] 220.126.59.229 () {40 vars in 695 bytes} [Wed Feb 14 17:25:15 2024] GET /favicon.ico => generated 2277 bytes in 13 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+[pid: 910|app: 0|req: 3/3] 220.126.59.229 () {44 vars in 829 bytes} [Wed Feb 14 17:25:17 2024] GET /index.do => generated 210 bytes in 16 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 0)
+Not Found: /
+[pid: 910|app: 0|req: 4/4] 192.241.195.115 () {34 vars in 375 bytes} [Wed Feb 14 17:28:55 2024] GET / => generated 2226 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '_'. The domain name provided is not valid according to RFC 1034/1035.
+Traceback (most recent call last):
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/utils/deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/http/request.py", line 148, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '_'. The domain name provided is not valid according to RFC 1034/1035.
+Bad Request: /
+[pid: 910|app: 0|req: 5/5] 139.162.84.205 () {30 vars in 400 bytes} [Wed Feb 14 17:41:51 2024] GET / => generated 56660 bytes in 54 msecs (HTTP/1.0 400) 4 headers in 172 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: 'www.madblog.co.kr'. You may need to add 'www.madblog.co.kr' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/utils/deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/http/request.py", line 148, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'www.madblog.co.kr'. You may need to add 'www.madblog.co.kr' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 910|app: 0|req: 6/6] 220.126.59.229 () {40 vars in 738 bytes} [Wed Feb 14 17:50:27 2024] GET / => generated 57699 bytes in 28 msecs (HTTP/1.1 400) 4 headers in 172 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: 'www.madblog.co.kr'. You may need to add 'www.madblog.co.kr' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/utils/deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/http/request.py", line 148, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'www.madblog.co.kr'. You may need to add 'www.madblog.co.kr' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+[pid: 910|app: 0|req: 7/7] 220.126.59.229 () {40 vars in 695 bytes} [Wed Feb 14 17:50:28 2024] GET /favicon.ico => generated 57766 bytes in 28 msecs (HTTP/1.1 400) 4 headers in 172 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: 'www.madblog.co.kr'. You may need to add 'www.madblog.co.kr' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/utils/deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/http/request.py", line 148, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'www.madblog.co.kr'. You may need to add 'www.madblog.co.kr' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 910|app: 0|req: 8/8] 220.126.59.229 () {44 vars in 817 bytes} [Wed Feb 14 17:50:28 2024] GET / => generated 58000 bytes in 27 msecs (HTTP/1.1 400) 4 headers in 172 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: 'www.madblog.co.kr'. You may need to add 'www.madblog.co.kr' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/utils/deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/http/request.py", line 148, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'www.madblog.co.kr'. You may need to add 'www.madblog.co.kr' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+[pid: 910|app: 0|req: 9/9] 220.126.59.229 () {40 vars in 695 bytes} [Wed Feb 14 17:50:28 2024] GET /favicon.ico => generated 57766 bytes in 28 msecs (HTTP/1.1 400) 4 headers in 172 bytes (1 switches on core 0)
+[pid: 910|app: 0|req: 10/10] 220.126.59.229 () {40 vars in 750 bytes} [Wed Feb 14 17:57:30 2024] GET /index.do => generated 210 bytes in 16 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 0)
+[pid: 910|app: 0|req: 11/11] 220.126.59.229 () {44 vars in 829 bytes} [Wed Feb 14 17:57:30 2024] GET /index.do => generated 210 bytes in 16 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 0)
+[pid: 910|app: 0|req: 12/12] 220.126.59.229 () {40 vars in 750 bytes} [Wed Feb 14 18:05:57 2024] GET /index.do => generated 210 bytes in 16 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 0)
+[pid: 910|app: 0|req: 13/13] 220.126.59.229 () {44 vars in 829 bytes} [Wed Feb 14 18:05:57 2024] GET /index.do => generated 210 bytes in 17 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 0)
+[pid: 910|app: 0|req: 14/14] 220.126.59.229 () {42 vars in 793 bytes} [Wed Feb 14 18:06:47 2024] GET /index.do => generated 210 bytes in 16 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 0)
+[pid: 910|app: 0|req: 15/15] 220.126.59.229 () {44 vars in 841 bytes} [Wed Feb 14 18:06:47 2024] GET /index.do => generated 210 bytes in 16 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 0)
