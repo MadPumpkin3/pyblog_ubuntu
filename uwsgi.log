@@ -560,3 +560,205 @@ Bad Request: /favicon.ico
 [pid: 910|app: 0|req: 13/13] 220.126.59.229 () {44 vars in 829 bytes} [Wed Feb 14 18:05:57 2024] GET /index.do => generated 210 bytes in 17 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 0)
 [pid: 910|app: 0|req: 14/14] 220.126.59.229 () {42 vars in 793 bytes} [Wed Feb 14 18:06:47 2024] GET /index.do => generated 210 bytes in 16 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 0)
 [pid: 910|app: 0|req: 15/15] 220.126.59.229 () {44 vars in 841 bytes} [Wed Feb 14 18:06:47 2024] GET /index.do => generated 210 bytes in 16 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 0)
+Not Found: /
+[pid: 910|app: 0|req: 16/16] 64.62.197.117 () {34 vars in 493 bytes} [Wed Feb 14 18:21:34 2024] GET / => generated 2226 bytes in 7 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: 'ec2-13-209-82-108.ap-northeast-2.compute.amazonaws.com'. You may need to add 'ec2-13-209-82-108.ap-northeast-2.compute.amazonaws.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/utils/deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/ubuntu/pyblog/lib/python3.10/site-packages/django/http/request.py", line 148, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'ec2-13-209-82-108.ap-northeast-2.compute.amazonaws.com'. You may need to add 'ec2-13-209-82-108.ap-northeast-2.compute.amazonaws.com' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 910|app: 0|req: 17/17] 54.70.53.60 () {42 vars in 740 bytes} [Wed Feb 14 18:45:40 2024] GET / => generated 58315 bytes in 27 msecs (HTTP/1.1 400) 4 headers in 172 bytes (1 switches on core 0)
+Not Found: /
+[pid: 910|app: 0|req: 18/18] 113.53.155.3 () {32 vars in 454 bytes} [Wed Feb 14 18:48:21 2024] GET / => generated 2229 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 910|app: 0|req: 19/19] 220.126.59.229 () {40 vars in 746 bytes} [Wed Feb 14 19:04:07 2024] GET / => generated 2226 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 910|app: 0|req: 20/20] 220.126.59.229 () {44 vars in 825 bytes} [Wed Feb 14 19:04:07 2024] GET / => generated 2226 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 910|app: 0|req: 21/21] 220.126.59.229 () {42 vars in 777 bytes} [Wed Feb 14 19:05:05 2024] GET / => generated 2226 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+[pid: 910|app: 0|req: 22/22] 220.126.59.229 () {40 vars in 762 bytes} [Wed Feb 14 19:06:05 2024] GET /index.do => generated 210 bytes in 21 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 0)
+[pid: 910|app: 0|req: 23/23] 220.126.59.229 () {44 vars in 841 bytes} [Wed Feb 14 19:06:05 2024] GET /index.do => generated 210 bytes in 16 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 0)
+Not Found: /
+[pid: 910|app: 0|req: 24/24] 220.126.59.229 () {40 vars in 746 bytes} [Wed Feb 14 19:06:15 2024] GET / => generated 2226 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 910|app: 0|req: 25/25] 220.126.59.229 () {44 vars in 825 bytes} [Wed Feb 14 19:06:15 2024] GET / => generated 2226 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+[pid: 910|app: 0|req: 26/26] 220.126.59.229 () {44 vars in 824 bytes} [Wed Feb 14 19:15:26 2024] GET /index.do => generated 210 bytes in 54 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 0)
+[pid: 910|app: 0|req: 27/27] 220.126.59.229 () {44 vars in 841 bytes} [Wed Feb 14 19:15:27 2024] GET /index.do => generated 210 bytes in 16 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 0)
+Not Found: /
+[pid: 910|app: 0|req: 28/28] 220.126.59.229 () {40 vars in 746 bytes} [Wed Feb 14 19:15:35 2024] GET / => generated 2226 bytes in 7 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /
+[pid: 910|app: 0|req: 29/29] 220.126.59.229 () {44 vars in 825 bytes} [Wed Feb 14 19:15:35 2024] GET / => generated 2226 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+Wed Feb 14 19:16:49 2024 - received message 0 from emperor
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/ubuntu/PYTHONBLOG/Pyblog/uwsgi.sock removed.
+*** Starting uWSGI 2.0.23 (64bit) on [Wed Feb 14 10:16:52 2024] ***
+compiled with version: 11.4.0 on 29 January 2024 08:02:47
+os: Linux-6.2.0-1018-aws #18~22.04.1-Ubuntu SMP Wed Jan 10 22:54:16 UTC 2024
+nodename: ip-172-31-2-169
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /etc/uwsgi/sites
+writing pidfile to /tmp/project-master.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/ubuntu/PYTHONBLOG/Pyblog
+your processes number limit is 3738
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/PYTHONBLOG/Pyblog/uwsgi.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+PEP 405 virtualenv detected: /home/ubuntu/pyblog
+Set PythonHome to /home/ubuntu/pyblog
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55b41f4530a0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55b41f4530a0 pid: 1405 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1405)
+spawned uWSGI worker 1 (pid: 1406, cores: 1)
+[pid: 1406|app: 0|req: 1/1] 220.126.59.229 () {44 vars in 824 bytes} [Wed Feb 14 19:16:57 2024] GET /index.do => generated 210 bytes in 171 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1406|app: 0|req: 2/2] 220.126.59.229 () {40 vars in 746 bytes} [Wed Feb 14 19:17:04 2024] GET / => generated 41913 bytes in 2 msecs (HTTP/1.1 200) 6 headers in 209 bytes (1 switches on core 0)
+[pid: 1406|app: 0|req: 3/3] 220.126.59.229 () {44 vars in 825 bytes} [Wed Feb 14 19:17:04 2024] GET / => generated 41913 bytes in 1 msecs (HTTP/1.1 200) 6 headers in 209 bytes (1 switches on core 0)
+Not Found: /js/scripts.js
+[pid: 1406|app: 0|req: 4/4] 220.126.59.229 () {40 vars in 642 bytes} [Wed Feb 14 19:17:04 2024] GET /js/scripts.js => generated 2560 bytes in 11 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /assets/demo/chart-area-demo.js
+[pid: 1406|app: 0|req: 5/5] 220.126.59.229 () {40 vars in 676 bytes} [Wed Feb 14 19:17:04 2024] GET /assets/demo/chart-area-demo.js => generated 2611 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /assets/demo/chart-bar-demo.js
+[pid: 1406|app: 0|req: 6/6] 220.126.59.229 () {40 vars in 674 bytes} [Wed Feb 14 19:17:04 2024] GET /assets/demo/chart-bar-demo.js => generated 2608 bytes in 4 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /js/datatables-simple-demo.js
+[pid: 1406|app: 0|req: 7/7] 220.126.59.229 () {40 vars in 672 bytes} [Wed Feb 14 19:17:04 2024] GET /js/datatables-simple-demo.js => generated 2605 bytes in 4 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+[pid: 1406|app: 0|req: 8/8] 220.126.59.229 () {42 vars in 777 bytes} [Wed Feb 14 19:19:51 2024] GET / => generated 41913 bytes in 1 msecs (HTTP/1.1 200) 6 headers in 209 bytes (1 switches on core 0)
+Not Found: /js/scripts.js
+[pid: 1406|app: 0|req: 9/9] 220.126.59.229 () {40 vars in 642 bytes} [Wed Feb 14 19:19:51 2024] GET /js/scripts.js => generated 2560 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /assets/demo/chart-area-demo.js
+[pid: 1406|app: 0|req: 10/10] 220.126.59.229 () {40 vars in 676 bytes} [Wed Feb 14 19:19:51 2024] GET /assets/demo/chart-area-demo.js => generated 2611 bytes in 5 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /assets/demo/chart-bar-demo.js
+[pid: 1406|app: 0|req: 11/11] 220.126.59.229 () {40 vars in 674 bytes} [Wed Feb 14 19:19:51 2024] GET /assets/demo/chart-bar-demo.js => generated 2608 bytes in 4 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+Not Found: /js/datatables-simple-demo.js
+[pid: 1406|app: 0|req: 12/12] 220.126.59.229 () {40 vars in 672 bytes} [Wed Feb 14 19:19:52 2024] GET /js/datatables-simple-demo.js => generated 2605 bytes in 4 msecs (HTTP/1.1 404) 6 headers in 215 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+Wed Feb 14 19:21:09 2024 - received message 0 from emperor
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/ubuntu/PYTHONBLOG/Pyblog/uwsgi.sock removed.
+*** Starting uWSGI 2.0.23 (64bit) on [Wed Feb 14 10:21:12 2024] ***
+compiled with version: 11.4.0 on 29 January 2024 08:02:47
+os: Linux-6.2.0-1018-aws #18~22.04.1-Ubuntu SMP Wed Jan 10 22:54:16 UTC 2024
+nodename: ip-172-31-2-169
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /etc/uwsgi/sites
+writing pidfile to /tmp/project-master.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/ubuntu/PYTHONBLOG/Pyblog
+your processes number limit is 3738
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/PYTHONBLOG/Pyblog/uwsgi.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+PEP 405 virtualenv detected: /home/ubuntu/pyblog
+Set PythonHome to /home/ubuntu/pyblog
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55707eb5e0a0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55707eb5e0a0 pid: 1448 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1448)
+spawned uWSGI worker 1 (pid: 1449, cores: 1)
+[pid: 1449|app: 0|req: 1/1] 220.126.59.229 () {42 vars in 777 bytes} [Wed Feb 14 19:21:32 2024] GET / => generated 41913 bytes in 23 msecs (HTTP/1.1 200) 6 headers in 209 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1449|app: 0|req: 2/2] 220.126.59.229 () {44 vars in 825 bytes} [Wed Feb 14 19:21:32 2024] GET / => generated 41913 bytes in 1 msecs (HTTP/1.1 200) 6 headers in 209 bytes (1 switches on core 0)
+[pid: 1449|app: 0|req: 3/3] 220.126.59.229 () {40 vars in 642 bytes} [Wed Feb 14 19:21:32 2024] GET /js/scripts.js => generated 179 bytes in 7 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1449|app: 0|req: 4/4] 220.126.59.229 () {40 vars in 676 bytes} [Wed Feb 14 19:21:32 2024] GET /assets/demo/chart-area-demo.js => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1449|app: 0|req: 5/5] 220.126.59.229 () {40 vars in 672 bytes} [Wed Feb 14 19:21:32 2024] GET /js/datatables-simple-demo.js => generated 179 bytes in 0 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1449|app: 0|req: 6/6] 220.126.59.229 () {40 vars in 674 bytes} [Wed Feb 14 19:21:32 2024] GET /assets/demo/chart-bar-demo.js => generated 179 bytes in 0 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+Wed Feb 14 19:25:41 2024 - received message 1 from emperor
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 1449)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /etc/uwsgi/sites
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/home/ubuntu/PYTHONBLOG/Pyblog/uwsgi.sock)
+running /usr/local/bin/uwsgi
+*** has_emperor mode detected (fd: 7) ***
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.23 (64bit) on [Wed Feb 14 19:25:42 2024] ***
+compiled with version: 11.4.0 on 29 January 2024 08:02:47
+os: Linux-6.2.0-1018-aws #18~22.04.1-Ubuntu SMP Wed Jan 10 22:54:16 UTC 2024
+nodename: ip-172-31-2-169
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /etc/uwsgi/sites
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/ubuntu/PYTHONBLOG/Pyblog
+your processes number limit is 3738
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /home/ubuntu/PYTHONBLOG/Pyblog/uwsgi.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+PEP 405 virtualenv detected: /home/ubuntu/pyblog
+Set PythonHome to /home/ubuntu/pyblog
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x555b4fd3dc50
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x555b4fd3dc50 pid: 1448 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1448)
+spawned uWSGI worker 1 (pid: 1464, cores: 1)
