@@ -10,3 +10,15 @@ class PyBlog(models.Model):
     
     class Meta:
         db_table = 'py_blog'
+        
+class PyBlogDetail(models.Model):
+    id = models.IntegerField(primary_key=True)
+    detail = models.ForeignKey(PyBlog, models.DO_NOTHING)
+    sub_title = models.CharField(max_length=100, blank=True, null=True)
+    img_url = models.CharField(max_length=200, blank=True, null=True)
+    img_size = models.CharField(max_length=3, blank=True, null=True)
+    content_body = models.TextField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'py_blog_detail'

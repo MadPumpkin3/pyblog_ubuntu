@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head><!-- 헤더 영역 -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>{{title_nm}}</title>
+        {% block css %}
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        {% endblock css %}
+    </head>
+    <body class="sb-nav-fixed"><!-- 바디 영역 -->
+        <!-- <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark"></nav> 상단네비 -->
+        {% include 'base/topbar.html' %}
+        <div id="layoutSidenav">
+            <!-- <div id="layoutSidenav_nav"></div>좌측네비 -->
+            {% include 'base/sidebar.html' %}
+            <div id="layoutSidenav_content"><!-- 컨텐츠 -->
+                <main>
+                    {% block content %}
+                    {% endblock content %}
+                </main>
+                <!-- <footer class="py-4 bg-light mt-auto"></footer>하단 푸터 -->
+                {% include 'base/footer.html' %}
+            </div>
+        </div>
+        {% block js %}
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+            <script src="{% static 'js/scripts.js' %}"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        {% endblock js %}
+    </body>
+</html>

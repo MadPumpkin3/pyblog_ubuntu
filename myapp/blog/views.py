@@ -9,7 +9,7 @@ class index(generic.ListView):
         self.title_nm = 'Pyblog'
         self.ogImgUrl = ''
         self.descript = '메인페이지입니다.'
-        self.template_name = 'index_test.html'
+        self.template_name = 'blog/index.html'
         
     def get(self, request, *args, **kwargs):
         self.content = {
