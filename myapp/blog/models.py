@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class PyBlog(models.Model):
-    id = models.IntegerField(primary_key=True, null=False)
+    id = models.AutoField(primary_key=True, null=False)
     title = models.CharField(max_length=100)
     update_dt = models.DateTimeField(auto_now=True)
     regist_dt = models.DateTimeField(auto_now_add=True)
@@ -12,8 +12,7 @@ class PyBlog(models.Model):
         db_table = 'py_blog'
         
 class PyBlogDetail(models.Model):
-    id = models.IntegerField(primary_key=True)
-    detail = models.ForeignKey(PyBlog, models.DO_NOTHING)
+    detail = models.ForeignKey(PyBlog, models.DO_NOTHING, related_name='pb_detail')
     sub_title = models.CharField(max_length=100, blank=True, null=True)
     img_url = models.CharField(max_length=200, blank=True, null=True)
     img_size = models.CharField(max_length=3, blank=True, null=True)
