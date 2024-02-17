@@ -762,3 +762,269 @@ uWSGI running as root, you can use --uid/--gid/--chroot options
 *** uWSGI is running in multiple interpreter mode ***
 gracefully (RE)spawned uWSGI master process (pid: 1448)
 spawned uWSGI worker 1 (pid: 1464, cores: 1)
+SIGINT/SIGTERM received...killing workers...
+Wed Feb 14 19:29:49 2024 - received message 0 from emperor
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM WARNING: unix socket /home/ubuntu/PYTHONBLOG/Pyblog/uwsgi.sock changed inode. Skip removal
+*** Starting uWSGI 2.0.23 (64bit) on [Thu Feb 15 07:34:48 2024] ***
+compiled with version: 11.4.0 on 29 January 2024 08:02:47
+os: Linux-6.2.0-1018-aws #18~22.04.1-Ubuntu SMP Wed Jan 10 22:54:16 UTC 2024
+nodename: ip-172-31-2-169
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /etc/uwsgi/sites
+writing pidfile to /tmp/project-master.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/ubuntu/PYTHONBLOG/Pyblog
+your processes number limit is 3738
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/PYTHONBLOG/Pyblog/uwsgi.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+PEP 405 virtualenv detected: /home/ubuntu/pyblog
+Set PythonHome to /home/ubuntu/pyblog
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55a158c4e0a0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 3 seconds on interpreter 0x55a158c4e0a0 pid: 403 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 403)
+spawned uWSGI worker 1 (pid: 622, cores: 1)
+[pid: 622|app: 0|req: 1/1] 124.90.226.57 () {32 vars in 445 bytes} [Thu Feb 15 17:02:11 2024] GET / => generated 143 bytes in 169 msecs (HTTP/1.1 400) 4 headers in 172 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 622|app: 0|req: 2/2] 139.162.84.205 () {30 vars in 412 bytes} [Thu Feb 15 17:39:53 2024] GET / => generated 143 bytes in 31 msecs (HTTP/1.0 400) 4 headers in 172 bytes (1 switches on core 0)
+[pid: 622|app: 0|req: 3/3] 150.109.159.4 () {42 vars in 787 bytes} [Thu Feb 15 18:05:49 2024] HEAD /Core/Skin/Login.aspx => generated 143 bytes in 12 msecs (HTTP/1.1 400) 4 headers in 172 bytes (1 switches on core 0)
+[pid: 622|app: 0|req: 4/4] 71.6.199.23 () {34 vars in 527 bytes} [Thu Feb 15 18:20:23 2024] GET / => generated 143 bytes in 12 msecs (HTTP/1.1 400) 4 headers in 172 bytes (1 switches on core 0)
+[pid: 622|app: 0|req: 5/5] 71.6.199.23 () {30 vars in 350 bytes} [Thu Feb 15 18:20:23 2024] GET /robots.txt => generated 143 bytes in 12 msecs (HTTP/1.1 400) 4 headers in 172 bytes (1 switches on core 0)
+[pid: 622|app: 0|req: 6/6] 71.6.199.23 () {30 vars in 352 bytes} [Thu Feb 15 18:20:24 2024] GET /sitemap.xml => generated 143 bytes in 11 msecs (HTTP/1.1 400) 4 headers in 172 bytes (1 switches on core 0)
+[pid: 622|app: 0|req: 7/7] 71.6.199.23 () {30 vars in 378 bytes} [Thu Feb 15 18:20:24 2024] GET /.well-known/security.txt => generated 143 bytes in 11 msecs (HTTP/1.1 400) 4 headers in 172 bytes (1 switches on core 0)
+[pid: 622|app: 0|req: 8/8] 71.6.199.23 () {36 vars in 538 bytes} [Thu Feb 15 18:20:24 2024] GET /favicon.ico => generated 143 bytes in 12 msecs (HTTP/1.1 400) 4 headers in 172 bytes (1 switches on core 0)
+[pid: 622|app: 0|req: 9/9] 159.203.192.38 () {34 vars in 387 bytes} [Thu Feb 15 18:45:56 2024] GET / => generated 143 bytes in 12 msecs (HTTP/1.1 400) 4 headers in 172 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+Thu Feb 15 19:08:14 2024 - received message 0 from emperor
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/ubuntu/PYTHONBLOG/Pyblog/uwsgi.sock removed.
+*** Starting uWSGI 2.0.23 (64bit) on [Thu Feb 15 10:08:17 2024] ***
+compiled with version: 11.4.0 on 29 January 2024 08:02:47
+os: Linux-6.2.0-1018-aws #18~22.04.1-Ubuntu SMP Wed Jan 10 22:54:16 UTC 2024
+nodename: ip-172-31-2-169
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /etc/uwsgi/sites
+writing pidfile to /tmp/project-master.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/ubuntu/PYTHONBLOG/Pyblog
+your processes number limit is 3738
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/PYTHONBLOG/Pyblog/uwsgi.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+PEP 405 virtualenv detected: /home/ubuntu/pyblog
+Set PythonHome to /home/ubuntu/pyblog
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x56467f15c0a0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x56467f15c0a0 pid: 1524 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1524)
+spawned uWSGI worker 1 (pid: 1525, cores: 1)
+[pid: 1525|app: 0|req: 1/1] 220.126.59.229 () {40 vars in 747 bytes} [Thu Feb 15 19:08:30 2024] GET / => generated 8933 bytes in 34 msecs (HTTP/1.1 200) 6 headers in 208 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+[pid: 1525|app: 0|req: 2/2] 220.126.59.229 () {40 vars in 701 bytes} [Thu Feb 15 19:08:30 2024] GET /favicon.ico => generated 179 bytes in 3 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 3/3] 220.126.59.229 () {42 vars in 790 bytes} [Thu Feb 15 19:09:52 2024] GET / => generated 8933 bytes in 1 msecs (HTTP/1.1 200) 6 headers in 208 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 4/4] 220.126.59.229 () {40 vars in 763 bytes} [Thu Feb 15 19:09:58 2024] GET /index.do => generated 210 bytes in 56 msecs (HTTP/1.1 200) 6 headers in 207 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 5/5] 220.126.59.229 () {40 vars in 759 bytes} [Thu Feb 15 19:10:09 2024] GET /admin/ => generated 0 bytes in 35 msecs (HTTP/1.1 302) 10 headers in 372 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 6/6] 220.126.59.229 () {40 vars in 796 bytes} [Thu Feb 15 19:10:09 2024] GET /admin/login/?next=/admin/ => generated 2238 bytes in 40 msecs (HTTP/1.1 200) 10 headers in 470 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 7/7] 220.126.59.229 () {52 vars in 1100 bytes} [Thu Feb 15 19:10:17 2024] POST /admin/login/?next=/admin/ => generated 0 bytes in 347 msecs (HTTP/1.1 302) 12 headers in 634 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 8/8] 220.126.59.229 () {46 vars in 954 bytes} [Thu Feb 15 19:10:17 2024] GET /admin/ => generated 6110 bytes in 38 msecs (HTTP/1.1 200) 10 headers in 470 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 9/9] 220.126.59.229 () {44 vars in 928 bytes} [Thu Feb 15 19:10:21 2024] GET /admin/blog/pyblog/ => generated 7592 bytes in 100 msecs (HTTP/1.1 200) 10 headers in 470 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 10/10] 220.126.59.229 () {42 vars in 763 bytes} [Thu Feb 15 19:10:21 2024] GET /admin/jsi18n/ => generated 8911 bytes in 23 msecs (HTTP/1.1 200) 7 headers in 230 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 11/11] 220.126.59.229 () {44 vars in 948 bytes} [Thu Feb 15 19:10:23 2024] GET /admin/blog/pyblog/add/ => generated 19293 bytes in 73 msecs (HTTP/1.1 200) 10 headers in 471 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 12/12] 220.126.59.229 () {42 vars in 767 bytes} [Thu Feb 15 19:10:23 2024] GET /admin/jsi18n/ => generated 8911 bytes in 19 msecs (HTTP/1.1 200) 7 headers in 230 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 13/13] 220.126.59.229 () {44 vars in 928 bytes} [Thu Feb 15 19:10:26 2024] GET /admin/blog/pyblog/ => generated 7592 bytes in 73 msecs (HTTP/1.1 200) 10 headers in 470 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 14/14] 220.126.59.229 () {44 vars in 891 bytes} [Thu Feb 15 19:10:32 2024] GET / => generated 8933 bytes in 1 msecs (HTTP/1.1 200) 6 headers in 208 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 15/15] 220.126.59.229 () {46 vars in 922 bytes} [Thu Feb 15 19:12:07 2024] GET / => generated 8933 bytes in 1 msecs (HTTP/1.1 200) 6 headers in 208 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 16/16] 220.126.59.229 () {46 vars in 922 bytes} [Thu Feb 15 19:16:42 2024] GET / => generated 8933 bytes in 1 msecs (HTTP/1.1 200) 6 headers in 208 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 17/17] 150.109.159.4 () {42 vars in 787 bytes} [Thu Feb 15 19:23:46 2024] HEAD /Core/Skin/Login.aspx => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 18/18] 117.235.27.65 () {32 vars in 457 bytes} [Thu Feb 15 20:08:31 2024] GET / => generated 8933 bytes in 1 msecs (HTTP/1.1 200) 6 headers in 208 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 19/19] 150.109.159.4 () {42 vars in 787 bytes} [Thu Feb 15 20:43:10 2024] HEAD /Core/Skin/Login.aspx => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 20/20] 45.56.108.128 () {30 vars in 469 bytes} [Thu Feb 15 20:49:47 2024] GET /systembc/password.php => generated 143 bytes in 16 msecs (HTTP/1.0 400) 4 headers in 172 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 21/21] 218.250.161.124 () {30 vars in 431 bytes} [Thu Feb 15 21:09:44 2024] GET / => generated 8933 bytes in 1 msecs (HTTP/1.1 200) 6 headers in 208 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 22/22] 35.203.211.128 () {30 vars in 592 bytes} [Thu Feb 15 21:17:50 2024] GET / => generated 8933 bytes in 1 msecs (HTTP/1.1 200) 6 headers in 208 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 23/23] 139.162.84.205 () {30 vars in 412 bytes} [Thu Feb 15 21:37:52 2024] GET / => generated 143 bytes in 14 msecs (HTTP/1.0 400) 4 headers in 172 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 24/24] 185.224.128.55 () {44 vars in 774 bytes} [Thu Feb 15 21:55:21 2024] GET / => generated 8933 bytes in 1 msecs (HTTP/1.1 200) 6 headers in 208 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 25/25] 150.109.159.4 () {42 vars in 787 bytes} [Thu Feb 15 22:03:05 2024] HEAD /Core/Skin/Login.aspx => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 26/26] 91.92.244.120 () {44 vars in 773 bytes} [Thu Feb 15 22:11:00 2024] GET / => generated 8933 bytes in 1 msecs (HTTP/1.1 200) 6 headers in 208 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 27/27] 150.109.159.4 () {42 vars in 787 bytes} [Thu Feb 15 23:24:22 2024] HEAD /Core/Skin/Login.aspx => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 28/28] 185.180.143.8 () {34 vars in 480 bytes} [Fri Feb 16 00:02:54 2024] GET / => generated 8933 bytes in 1 msecs (HTTP/1.1 200) 6 headers in 208 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 29/29] 150.109.159.4 () {42 vars in 787 bytes} [Fri Feb 16 00:44:50 2024] HEAD /Core/Skin/Login.aspx => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 30/30] 130.211.54.158 () {42 vars in 557 bytes} [Fri Feb 16 00:57:28 2024] GET / => generated 8933 bytes in 1 msecs (HTTP/1.1 200) 6 headers in 208 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 31/31] 139.162.84.205 () {30 vars in 412 bytes} [Fri Feb 16 01:37:42 2024] GET / => generated 143 bytes in 12 msecs (HTTP/1.0 400) 4 headers in 172 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 32/32] 150.109.159.4 () {42 vars in 787 bytes} [Fri Feb 16 02:05:22 2024] HEAD /Core/Skin/Login.aspx => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 33/33] 103.154.49.97 () {32 vars in 457 bytes} [Fri Feb 16 02:47:44 2024] GET / => generated 8933 bytes in 1 msecs (HTTP/1.1 200) 6 headers in 208 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 34/34] 150.109.159.4 () {42 vars in 787 bytes} [Fri Feb 16 03:25:27 2024] HEAD /Core/Skin/Login.aspx => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 35/35] 150.109.159.4 () {42 vars in 787 bytes} [Fri Feb 16 04:44:52 2024] HEAD /Core/Skin/Login.aspx => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 36/36] 138.199.31.17 () {30 vars in 429 bytes} [Fri Feb 16 04:49:29 2024] GET / => generated 8933 bytes in 1 msecs (HTTP/1.1 200) 6 headers in 208 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 37/37] 139.162.84.205 () {30 vars in 412 bytes} [Fri Feb 16 05:44:10 2024] GET / => generated 143 bytes in 12 msecs (HTTP/1.0 400) 4 headers in 172 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 38/38] 150.109.159.4 () {42 vars in 787 bytes} [Fri Feb 16 06:04:04 2024] HEAD /Core/Skin/Login.aspx => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 39/39] 198.235.24.150 () {30 vars in 580 bytes} [Fri Feb 16 06:26:44 2024] GET / => generated 143 bytes in 12 msecs (HTTP/1.0 400) 4 headers in 172 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 40/40] 45.164.35.1 () {32 vars in 455 bytes} [Fri Feb 16 07:12:53 2024] GET / => generated 8933 bytes in 1 msecs (HTTP/1.1 200) 6 headers in 208 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 41/41] 141.98.7.206 () {30 vars in 347 bytes} [Fri Feb 16 07:18:30 2024] GET /nginx_status => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 42/42] 150.109.159.4 () {42 vars in 787 bytes} [Fri Feb 16 07:23:14 2024] HEAD /Core/Skin/Login.aspx => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 43/43] 150.109.159.4 () {42 vars in 787 bytes} [Fri Feb 16 08:42:09 2024] HEAD /Core/Skin/Login.aspx => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 44/44] 192.241.159.156 () {34 vars in 478 bytes} [Fri Feb 16 09:16:36 2024] GET / => generated 8933 bytes in 1 msecs (HTTP/1.1 200) 6 headers in 208 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 45/45] 192.241.159.156 () {34 vars in 395 bytes} [Fri Feb 16 09:16:37 2024] GET /form.html => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 46/46] 192.241.159.156 () {34 vars in 392 bytes} [Fri Feb 16 09:16:37 2024] GET /upl.php => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 47/47] 192.241.159.156 () {34 vars in 490 bytes} [Fri Feb 16 09:16:38 2024] GET /geoip/ => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 48/48] 192.241.159.156 () {34 vars in 500 bytes} [Fri Feb 16 09:16:38 2024] GET /favicon.ico => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 49/49] 192.241.159.156 () {34 vars in 488 bytes} [Fri Feb 16 09:16:39 2024] GET /1.php => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 50/50] 192.241.159.156 () {34 vars in 496 bytes} [Fri Feb 16 09:16:39 2024] GET /bundle.js => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 51/51] 192.241.159.156 () {34 vars in 490 bytes} [Fri Feb 16 09:16:39 2024] GET /files/ => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 52/52] 192.241.159.156 () {34 vars in 520 bytes} [Fri Feb 16 09:16:40 2024] GET /systembc/password.php => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 53/53] 192.241.159.156 () {34 vars in 502 bytes} [Fri Feb 16 09:16:40 2024] GET /password.php => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 54/54] 192.241.159.156 () {34 vars in 494 bytes} [Fri Feb 16 09:16:41 2024] GET /info.php => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 55/55] 150.109.159.4 () {42 vars in 787 bytes} [Fri Feb 16 10:01:59 2024] HEAD /Core/Skin/Login.aspx => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 56/56] 163.123.142.146 () {36 vars in 584 bytes} [Fri Feb 16 11:04:13 2024] GET /.env => generated 179 bytes in 72 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 57/57] 163.123.142.146 () {40 vars in 691 bytes} [Fri Feb 16 11:04:13 2024] POST / => generated 1529 bytes in 12 msecs (HTTP/1.1 403) 6 headers in 215 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 58/58] 150.109.159.4 () {42 vars in 787 bytes} [Fri Feb 16 11:20:05 2024] HEAD /Core/Skin/Login.aspx => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 59/59] 159.203.192.45 () {34 vars in 415 bytes} [Fri Feb 16 11:28:44 2024] GET /portal/redlion => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 60/60] 205.210.31.60 () {30 vars in 591 bytes} [Fri Feb 16 12:03:06 2024] GET / => generated 8933 bytes in 1 msecs (HTTP/1.1 200) 6 headers in 208 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 61/61] 150.109.159.4 () {42 vars in 787 bytes} [Fri Feb 16 12:37:57 2024] HEAD /Core/Skin/Login.aspx => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 62/62] 198.235.24.146 () {30 vars in 592 bytes} [Fri Feb 16 13:22:22 2024] GET / => generated 8933 bytes in 1 msecs (HTTP/1.1 200) 6 headers in 208 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 63/63] 139.162.84.205 () {30 vars in 412 bytes} [Fri Feb 16 13:38:00 2024] GET / => generated 143 bytes in 26 msecs (HTTP/1.0 400) 4 headers in 172 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 64/64] 150.109.159.4 () {42 vars in 787 bytes} [Fri Feb 16 13:55:57 2024] HEAD /Core/Skin/Login.aspx => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 65/65] 150.109.159.4 () {42 vars in 787 bytes} [Fri Feb 16 15:14:44 2024] HEAD /Core/Skin/Login.aspx => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 66/66] 35.203.210.225 () {30 vars in 592 bytes} [Fri Feb 16 15:38:15 2024] GET / => generated 8933 bytes in 1 msecs (HTTP/1.1 200) 6 headers in 208 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 67/67] 198.235.24.82 () {30 vars in 579 bytes} [Fri Feb 16 15:56:54 2024] GET / => generated 143 bytes in 90 msecs (HTTP/1.0 400) 4 headers in 172 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 68/68] 35.195.93.98 () {42 vars in 553 bytes} [Fri Feb 16 15:57:32 2024] GET / => generated 8933 bytes in 1 msecs (HTTP/1.1 200) 6 headers in 208 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 69/69] 185.242.226.10 () {34 vars in 481 bytes} [Fri Feb 16 16:20:54 2024] GET / => generated 8933 bytes in 1 msecs (HTTP/1.1 200) 6 headers in 208 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 70/70] 150.109.159.4 () {42 vars in 787 bytes} [Fri Feb 16 16:33:59 2024] HEAD /Core/Skin/Login.aspx => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 1525|app: 0|req: 71/71] 159.203.208.30 () {34 vars in 399 bytes} [Fri Feb 16 16:53:13 2024] GET /hudson => generated 179 bytes in 1 msecs (HTTP/1.1 404) 6 headers in 214 bytes (1 switches on core 0)
+SIGINT/SIGTERM received...killing workers...
+Fri Feb 16 17:35:40 2024 - received message 0 from emperor
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/ubuntu/PYTHONBLOG/Pyblog/uwsgi.sock removed.
+*** Starting uWSGI 2.0.23 (64bit) on [Fri Feb 16 08:37:46 2024] ***
+compiled with version: 11.4.0 on 29 January 2024 08:02:47
+os: Linux-6.2.0-1018-aws #18~22.04.1-Ubuntu SMP Wed Jan 10 22:54:16 UTC 2024
+nodename: ip-172-31-2-169
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /etc/uwsgi/sites
+writing pidfile to /tmp/project-master.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/ubuntu/PYTHONBLOG/Pyblog
+your processes number limit is 3738
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/PYTHONBLOG/Pyblog/uwsgi.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+PEP 405 virtualenv detected: /home/ubuntu/pyblog
+Set PythonHome to /home/ubuntu/pyblog
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x557efe6170a0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 3 seconds on interpreter 0x557efe6170a0 pid: 390 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 390)
+spawned uWSGI worker 1 (pid: 604, cores: 1)
+[pid: 604|app: 0|req: 1/1] 139.162.84.205 () {30 vars in 412 bytes} [Fri Feb 16 17:42:27 2024] GET / => generated 143 bytes in 105 msecs (HTTP/1.0 400) 4 headers in 172 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
+SIGINT/SIGTERM received...killing workers...
+Fri Feb 16 17:47:29 2024 - received message 0 from emperor
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/ubuntu/PYTHONBLOG/Pyblog/uwsgi.sock removed.
+*** Starting uWSGI 2.0.23 (64bit) on [Sat Feb 17 06:16:49 2024] ***
+compiled with version: 11.4.0 on 29 January 2024 08:02:47
+os: Linux-6.2.0-1018-aws #18~22.04.1-Ubuntu SMP Wed Jan 10 22:54:16 UTC 2024
+nodename: ip-172-31-2-169
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /etc/uwsgi/sites
+writing pidfile to /tmp/project-master.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/ubuntu/PYTHONBLOG/Pyblog
+your processes number limit is 3738
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/PYTHONBLOG/Pyblog/uwsgi.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+PEP 405 virtualenv detected: /home/ubuntu/pyblog
+Set PythonHome to /home/ubuntu/pyblog
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5595be6440a0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 3 seconds on interpreter 0x5595be6440a0 pid: 404 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 404)
+spawned uWSGI worker 1 (pid: 623, cores: 1)
+[pid: 623|app: 0|req: 1/1] 162.243.143.11 () {34 vars in 418 bytes} [Sat Feb 17 15:37:08 2024] GET /manager/text/list => generated 143 bytes in 117 msecs (HTTP/1.1 400) 4 headers in 172 bytes (1 switches on core 0)
+announcing my loyalty to the Emperor...
