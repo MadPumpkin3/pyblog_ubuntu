@@ -79,8 +79,8 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'test',
-        'USER': 'pyblog2',
+        'NAME': 'pyblog', #데이터베이스명
+        'USER': 'pyblog',
         'PASSWORD': '2150',
         # 현재 호스트(IP)가 유동 IP라서 AWS 재시동시 수정해야 함.
         'HOST': '3.38.162.65',

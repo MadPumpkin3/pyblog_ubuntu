@@ -1,0 +1,27 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<div class="container-flueid">
+    <h1 class="mt-4">{{ title_nm }}</h1>
+        <div class="row">
+            <div class="col-xl-8">
+                <div class="card mb-4">
+                {% for list in dataList %}
+                    <div class="card-header py-3">
+                        <h2 class="m-1 font-weight-bold text-dark"><span id="{{ list.pb_detail__sub_title }}">{{ list.pb_datail__sub_title }}</span></h2>
+                    </div>
+                    <div class="card-dody">
+                        {% if list.pb_detail__img_url %}
+                        <div class="text-center">
+                            <!-- style 부분 추후 수정 필요(작동에는 문제 없음)-->
+                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: {{ list.pb_detail__img_size }}rem;" src="{{ list.pb_detail__img_url }}"/>
+                        </div>
+                        {% endif %}
+
+                        <div class="mb-2 pl-4">{{ list.pb_detail__content_body }}</div>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+</div>
+{% endblock %}

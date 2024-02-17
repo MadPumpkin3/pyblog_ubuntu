@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class PyBlog(models.Model):
-     id = models.AutoField(primary_key=True, null=False)
+     id = models.AutoField(primary_key=True)
      title = models.CharField(max_length=100)
      update_dt = models.DateTimeField(auto_now=True)
      regist_dt = models.DateTimeField(auto_now_add=True)
@@ -19,5 +19,5 @@ class PyBlogDetail(models.Model):
      content_body = models.TextField(blank=True, null=True)
 
      class Meta:
-         managed = False
+         managed = True
          db_table = 'py_blog_detail'
