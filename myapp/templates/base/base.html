@@ -23,6 +23,9 @@
             {% include 'base/sidebar.html' %}
             <div id="layoutSidenav_content"><!-- 컨텐츠 -->
                 <main>
+                    <div id="search_result" class="results g_search_hide">
+                        <gcse:searchresults-only></gcse:searchresults-only>
+                    </div>
                     {% block content %}
                     {% endblock content %}
                 </main>

@@ -1,4 +1,6 @@
 {% extends 'base/base.html' %}
+{% load extr_blog %}
+
 {% block content %}
 <div class="container-flueid">
     <h1 class="mt-4">Python Blogs</h1>
@@ -7,7 +9,7 @@
                 <div class="card mb-4">
                 {% for list in object_list %}
                     <div class="card-header">
-                        <p><a href="{% url 'blog:blog_detail' list.id %}">{{list.title}}</a></p>
+                        <p><a href="{% url 'blog:blog_detail' list.id %}">{{list.title|lower}}</a></p>
                     </div>
                 {% endfor %}
                 </div>

@@ -1,32 +1,22 @@
 from django.shortcuts import render
 from django.views import generic
-from .models import PyBlog
+from django.utils.functional import cached_property # 이건 뭐지?
+
+from .models import PyBlog, PyBlogDetail
 
 # Create your views here.
 
-# class index(generic.ListView):
-#     def __init__(self):
-#         self.title_nm = 'Pyblog'
-#         self.ogImgUrl = ''
-#         self.descript = '메인페이지입니다.'
-#         self.template_name = 'blog/index.html'
-        
-#     def get(self, request, *args, **kwargs):
-#         self.content = {
-#             "descript": self.descript,
-#             "title_nm": self.title_nm,
-#             "ogImgUrl": self.ogImgUrl,
-#             "dataList": PyBlog.objects.all(),
-#         }
-        
-#         return render(request, self.template_name, self.content)
+class sidebarMixin(object):
+    @cached_property # 이건 뭐지 진짜?
+    def getList(self):
+        return PyBlog.objects.all
     
 class firstIndex(generic.ListView):
     def __init__(self):
         self.title_nm = "PythonBlog에 오신것을 환영합니다."
-        self.ogImgUrl = ''
-        self.descript = ''
-        self.template_name = 'index.html'
+        self.ogImgUrl = ""
+        self.descript = ""
+        self.template_name = "index.html"
         
     def get(self, request, *args, **kwargs):
         self.content = {"descript":self.descript,
@@ -39,7 +29,7 @@ class firstIndex(generic.ListView):
 class blogList(generic.ListView):
     model = PyBlog
     
-class blogDetail(generic.View):
+class blogDetail(sidebarMixin, generic.View):
     def __init__(self):
         self.template_name = 'blog/blogDetail.html'
         
@@ -56,6 +46,7 @@ class blogDetail(generic.View):
     
     def get(self, request, *args, **kwargs):
         self.content = {"dataList":self.get_queryset(),
+                        "sidebarList":self.getList,
                         "descript":self.descript,
                         "title_nm":self.title_nm,
                         "ogImgUrl":self.ogImgUrl,}

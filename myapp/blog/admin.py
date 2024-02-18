@@ -1,5 +1,8 @@
 from django.contrib import admin
 from .models import PyBlog, PyBlogDetail
+from markdownx.admin import MarkdownxModelAdmin
+from markdownx.widgets import AdminMarkdownxWidget
+from markdownx.models import MarkdownxField
 
 # Register your models here.
 # @admin.register(PyBlog)
@@ -9,6 +12,9 @@ from .models import PyBlog, PyBlogDetail
 class containPythonBlog(admin.StackedInline):
     model = PyBlogDetail
     extra = 3
+    formfield_overrides = {
+        MarkdownxField: {'widget': AdminMarkdownxWidget}
+    }
     
 class admin_pythonblog(admin.ModelAdmin):
     list_display = ('id', 'title', 'regist_dt', 'update_dt')
@@ -18,5 +24,8 @@ class admin_pythonblog(admin.ModelAdmin):
     ]
     inlines = [ containPythonBlog ]
     
+    # class Media:
+    #     js = ('admin/js/markdown_preview.js',)
+    
 admin.site.register(PyBlog, admin_pythonblog)
-admin.site.register(PyBlogDetail)
+admin.site.register(PyBlogDetail, MarkdownxModelAdmin)

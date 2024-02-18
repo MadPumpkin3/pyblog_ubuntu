@@ -1,4 +1,6 @@
 {% extends 'base/base.html' %}
+{% load extr_blog %}
+
 {% block content %}
 <div class="container-flueid">
     <h1 class="mt-4">{{ title_nm }}</h1>
@@ -18,7 +20,7 @@
                         </div>
                         {% endif %}
 
-                        <div class="mb-2 pl-4">{{ list.pb_detail__content_body }}</div>
+                        <div class="mb-2 pl-4">{{ list.pb_detail__content_body|formatted_markdown }}</div>
                     </div>
                 {% endfor %}
                 </div>

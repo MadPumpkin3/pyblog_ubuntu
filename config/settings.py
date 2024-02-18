@@ -32,15 +32,35 @@ SECRET_KEY = 'django-insecure-_h1gu0ypjysy1flz5vieyx$8i7)84y^4zo=ypd2qtapxkui%jf
 
 # Application definition
 
+SITE_ID = 1
+
 INSTALLED_APPS = [
+    'myapp.blog',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'myapp.blog',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
+    'markdownx',
 ]
+
+MARKDOWNX_MARKDOWN_EXTENSIONS = [
+    'markdown.extensions.codehilite',
+    'markdown.extensions.fenced_code',
+    'markdown.extensions.extra',
+    'markdown.extensions.toc'
+]
+
+MARKDOWNX_MARKDOWN_EXTENSION_CONFIGS = {
+    'markdown.extensions.codehilite': {
+        'linenums': True,
+        'use_pygments': True,
+        'noclasses': True
+    }
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -83,7 +103,7 @@ DATABASES = {
         'USER': 'pyblog',
         'PASSWORD': '2150',
         # 현재 호스트(IP)가 유동 IP라서 AWS 재시동시 수정해야 함.
-        'HOST': '3.38.162.65',
+        'HOST': '43.202.50.18',
         'PORT': '3306',
     }
 }
