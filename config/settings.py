@@ -103,7 +103,7 @@ DATABASES = {
         'USER': 'pyblog',
         'PASSWORD': '2150',
         # 현재 호스트(IP)가 유동 IP라서 AWS 재시동시 수정해야 함.
-        'HOST': '43.202.50.18',
+        'HOST': '3.34.51.132',
         'PORT': '3306',
     }
 }
