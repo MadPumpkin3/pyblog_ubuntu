@@ -1,0 +1,25 @@
+[2024-02-21 17:39:42] INFO Watching for file changes with StatReloader
+[2024-02-21 17:41:59] INFO Watching for file changes with StatReloader
+[2024-02-21 17:42:14] INFO "GET / HTTP/1.1" 200 16143
+[2024-02-21 17:42:18] INFO SELECT `py_blog`.`id`, `py_blog`.`title`, `py_blog`.`update_dt`, `py_blog`.`regist_dt` FROM `py_blog` WHERE `py_blog`.`id` = 1
+[2024-02-21 17:42:18] INFO "GET /blog/1 HTTP/1.1" 200 17787
+[2024-02-21 17:42:21] INFO SELECT `py_blog`.`id`, `py_blog`.`title`, `py_blog`.`update_dt`, `py_blog`.`regist_dt` FROM `py_blog` WHERE `py_blog`.`id` = 2
+[2024-02-21 17:42:21] INFO "GET /blog/2 HTTP/1.1" 200 17894
+[2024-02-21 17:43:12] INFO SELECT `py_blog`.`id`, `py_blog`.`title`, `py_blog`.`update_dt`, `py_blog`.`regist_dt` FROM `py_blog` WHERE `py_blog`.`id` = 1
+[2024-02-21 17:43:12] INFO "GET /blog/1 HTTP/1.1" 200 17786
+[2024-02-21 17:43:14] INFO SELECT `py_blog`.`id`, `py_blog`.`title`, `py_blog`.`update_dt`, `py_blog`.`regist_dt` FROM `py_blog` WHERE `py_blog`.`id` = 2
+[2024-02-21 17:43:14] INFO "GET /blog/2 HTTP/1.1" 200 17894
+[2024-02-21 17:43:16] INFO SELECT `py_blog`.`id`, `py_blog`.`title`, `py_blog`.`update_dt`, `py_blog`.`regist_dt` FROM `py_blog` WHERE `py_blog`.`id` = 3
+[2024-02-21 17:43:17] INFO "GET /blog/3 HTTP/1.1" 200 17679
+[2024-02-21 17:43:18] INFO SELECT `py_blog`.`id`, `py_blog`.`title`, `py_blog`.`update_dt`, `py_blog`.`regist_dt` FROM `py_blog` WHERE `py_blog`.`id` = 2
+[2024-02-21 17:43:18] INFO "GET /blog/2 HTTP/1.1" 200 17893
+[2024-02-21 17:43:26] INFO SELECT `py_blog`.`id`, `py_blog`.`title`, `py_blog`.`update_dt`, `py_blog`.`regist_dt` FROM `py_blog` WHERE `py_blog`.`id` = 3
+[2024-02-21 17:43:27] INFO "GET /blog/3 HTTP/1.1" 200 17678
+[2024-02-21 17:43:37] INFO SELECT `py_blog`.`id`, `py_blog`.`title`, `py_blog`.`update_dt`, `py_blog`.`regist_dt` FROM `py_blog` WHERE `py_blog`.`id` = 2
+[2024-02-21 17:43:38] INFO "GET /blog/2 HTTP/1.1" 200 17894
+[2024-02-21 17:43:45] INFO SELECT `py_blog`.`id`, `py_blog`.`title`, `py_blog`.`update_dt`, `py_blog`.`regist_dt` FROM `py_blog` WHERE `py_blog`.`id` = 3
+[2024-02-21 17:43:45] INFO "GET /blog/3 HTTP/1.1" 200 17677
+[2024-02-21 17:43:47] INFO SELECT `py_blog`.`id`, `py_blog`.`title`, `py_blog`.`update_dt`, `py_blog`.`regist_dt` FROM `py_blog` WHERE `py_blog`.`id` = 2
+[2024-02-21 17:43:47] INFO "GET /blog/2 HTTP/1.1" 200 17894
+[2024-02-21 17:43:48] INFO SELECT `py_blog`.`id`, `py_blog`.`title`, `py_blog`.`update_dt`, `py_blog`.`regist_dt` FROM `py_blog` WHERE `py_blog`.`id` = 1
+[2024-02-21 17:43:48] INFO "GET /blog/1 HTTP/1.1" 200 17785

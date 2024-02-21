@@ -13,6 +13,12 @@ class PyBlog(models.Model):
      
      def get_absolute_url(self): # reverse 함수를 통해 모델의 개별 데이터 url를 문자열로 반환한다.
          return reverse("blog:blog_detail", kwargs={"pk": self.id})
+     
+     def get_previous(self): # regist_dt 기준으로 이전 객체를 가져오는 코드
+         return self.get_previous_by_regist_dt()
+     
+     def get_next(self): # regist_dt 기준으로 다음 객체를 가져오는 코드
+         return self.get_next_by_regist_dt()
     
      class Meta:
          db_table = 'py_blog'

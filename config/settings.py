@@ -103,7 +103,7 @@ DATABASES = {
         'USER': 'pyblog',
         'PASSWORD': '2150',
         # 현재 호스트(IP)가 유동 IP라서 AWS 재시동시 수정해야 함.
-        'HOST': '3.34.51.132',
+        'HOST': '3.38.115.107',
         'PORT': '3306',
     }
 }
@@ -148,6 +148,49 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'myapp/static')]
 STATICFILES_FINDERS = ["django.contrib.staticfiles.finders.FileSystemFinder", "django.contrib.staticfiles.finders.AppDirectoriesFinder",]
+
+LOGGING = {
+    'version' : 1,
+    'disable_existing_loggers': False,
+    # 형식정의
+    'formatters': {
+        'format1': {'format': '[%(asctime)s] %(levelname)s %(message)s','datefmt': "%Y-%m-%d %H:%M:%S"},
+        'format2': {'format': '%(levelname)s %(message)s [%(name)s:%(lineno)s]'},
+    },
+    'handlers': {
+        # 파일저장
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs/pythonblog.log'),
+            'encoding': 'UTF-8',
+            'maxBytes': 1024 * 1024 * 5,  # 5 MB
+            'backupCount': 5, # 백업파일 5개
+            'formatter': 'format1',
+        },
+        # 콘솔(터미널)에 출력
+        'console': {'level': 'INFO','class': 'logging.StreamHandler','formatter': 'format2',
+                    },
+    },
+    'loggers': {
+        # 종류
+        'django.server': {
+            'handlers': ['file','console'],
+            'propagate': False,
+            'level': 'INFO',
+        },
+        'django.request': {
+            'handlers':['file','console'],
+            'propagate': False,
+            'level':'DEBUG',
+        },        
+        '': {
+            'level': 'DEBUG',
+            'handlers': ['file'],
+            'propagate': True,
+        },
+    },
+}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

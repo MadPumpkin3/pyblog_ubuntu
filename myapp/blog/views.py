@@ -4,6 +4,7 @@ from django.views import generic
 from django.utils.functional import cached_property # 이건 뭐지?
 
 from .models import PyBlog
+import logging as log
 
 # Create your views here.
 
@@ -27,6 +28,8 @@ class blogDetail(blogList, generic.View):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         query_set = PyBlog.objects.filter(id=self.kwargs['pk'])
+        context['pageInfo'] = query_set[0]
+        log.info(query_set.query)
         query_set = query_set.values('id', 'title', 'update_dt', 'regist_dt', 
                                  'pb_detail__detail_id', 'pb_detail__sub_title', 
                                  'pb_detail__img_url', 'pb_detail__img_size', 'pb_detail__content_body'

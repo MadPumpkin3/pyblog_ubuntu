@@ -5,9 +5,9 @@
                 {% for list in sidebarList %}
                 <!-- <a class="nav-link" href="{% url 'blog:blog_detail' list.id %}"> -->
                     <a class="nav-link" href="{{ list.get_absolute_url }}">
-                    <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                        {{ list.title }}
-                </a>
+                    <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i> {{ list.title }}</div>
+                    <br>
+                    </a>
                 {% endfor %}
         </div>
     </nav>
