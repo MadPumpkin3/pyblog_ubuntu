@@ -31,6 +31,7 @@ urlpatterns = [
     path('robots.txt', TemplateView.as_view(template_name="robots.txt", content_type='text/plain')), 
     path('admin/', admin.site.urls),
     path('', include('myapp.blog.urls')),
+    path('', include('myapp.coding.urls')),
     # 마크다운 기능을 등록
     path('markdownx/', include('markdownx.urls')),
 ]

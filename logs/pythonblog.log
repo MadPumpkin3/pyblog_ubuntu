@@ -23,3 +23,158 @@
 [2024-02-21 17:43:47] INFO "GET /blog/2 HTTP/1.1" 200 17894
 [2024-02-21 17:43:48] INFO SELECT `py_blog`.`id`, `py_blog`.`title`, `py_blog`.`update_dt`, `py_blog`.`regist_dt` FROM `py_blog` WHERE `py_blog`.`id` = 1
 [2024-02-21 17:43:48] INFO "GET /blog/1 HTTP/1.1" 200 17785
+[2024-02-22 15:38:12] INFO Watching for file changes with StatReloader
+[2024-02-22 15:38:17] INFO "GET / HTTP/1.1" 200 16204
+[2024-02-22 15:38:17] INFO "GET /static/css/styles.css HTTP/1.1" 200 250226
+[2024-02-22 15:38:18] INFO "GET /static/favicon.ico HTTP/1.1" 200 270398
+[2024-02-22 16:53:32] INFO Watching for file changes with StatReloader
+[2024-02-22 16:53:36] INFO "GET / HTTP/1.1" 200 16204
+[2024-02-22 16:53:38] INFO "GET /admin/ HTTP/1.1" 200 17459
+[2024-02-22 16:53:38] INFO "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[2024-02-22 16:53:38] INFO "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+[2024-02-22 16:53:38] INFO "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[2024-02-22 16:53:38] WARNING Not Found: /favicon.ico
+[2024-02-22 16:53:38] WARNING "GET /favicon.ico HTTP/1.1" 404 12425
+[2024-02-22 16:53:45] INFO "GET /admin/coding/pycoding/ HTTP/1.1" 200 16181
+[2024-02-22 16:53:45] INFO "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+[2024-02-22 16:53:45] INFO "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 288580
+[2024-02-22 16:53:45] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-22 16:53:47] INFO "GET /admin/coding/pycoding/add/ HTTP/1.1" 200 20599
+[2024-02-22 16:53:47] INFO "GET /static/markdownx/admin/css/markdownx.css HTTP/1.1" 200 4059
+[2024-02-22 16:53:47] INFO "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+[2024-02-22 16:53:47] INFO "GET /static/markdownx/js/markdownx.js HTTP/1.1" 200 33556
+[2024-02-22 16:53:47] INFO "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19379
+[2024-02-22 16:53:47] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-22 16:53:47] INFO "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+[2024-02-22 16:53:47] INFO "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+[2024-02-22 16:53:48] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 0
+[2024-02-22 16:54:12] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 0
+[2024-02-22 16:54:12] INFO "GET /__debug__/history_sidebar/?store_id=9afee230eb584bb99a3194bc5c5d49af HTTP/1.1" 200 9519
+[2024-02-22 16:54:12] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 19
+[2024-02-22 16:54:12] INFO "GET /__debug__/history_sidebar/?store_id=5e9bce3aaa244d3180328dabfb185620 HTTP/1.1" 200 9519
+[2024-02-22 16:54:36] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 19
+[2024-02-22 16:54:36] INFO "GET /__debug__/history_sidebar/?store_id=5cfd5e3ec481459e946b8ecd8b21b7ef HTTP/1.1" 200 9519
+[2024-02-22 16:54:50] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 19
+[2024-02-22 16:54:50] INFO "GET /__debug__/history_sidebar/?store_id=f682248a0be14cbd915f1ea952f05b0e HTTP/1.1" 200 9519
+[2024-02-22 16:55:07] INFO "POST /admin/coding/pycoding/add/ HTTP/1.1" 200 20909
+[2024-02-22 16:55:07] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-22 16:55:07] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 19
+[2024-02-22 16:55:21] INFO "POST /admin/coding/pycoding/add/ HTTP/1.1" 302 0
+[2024-02-22 16:55:21] INFO "GET /admin/coding/pycoding/ HTTP/1.1" 200 17632
+[2024-02-22 16:55:22] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-22 16:55:24] INFO "GET /admin/coding/pycoding/1/change/ HTTP/1.1" 200 21041
+[2024-02-22 16:55:24] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-22 16:55:24] INFO "GET /static/admin/img/tooltag-arrowright.svg HTTP/1.1" 200 280
+[2024-02-22 16:55:24] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 19
+[2024-02-22 16:55:25] INFO "GET /admin/coding/pycoding/ HTTP/1.1" 200 17412
+[2024-02-22 16:55:40] WARNING Not Found: /coding/1/
+[2024-02-22 16:55:40] WARNING "GET /coding/1/ HTTP/1.1" 404 12417
+[2024-02-22 16:55:46] WARNING Not Found: /coding/0/
+[2024-02-22 16:55:46] WARNING "GET /coding/0/ HTTP/1.1" 404 12417
+[2024-02-22 16:57:06] INFO /Users/beomtaehyeon/Documents/GitHub_Clon/pyblog_ubuntu/myapp/coding/models.py changed, reloading.
+[2024-02-22 16:57:06] INFO Watching for file changes with StatReloader
+[2024-02-22 16:57:12] WARNING Not Found: /coding/1/
+[2024-02-22 16:57:12] WARNING "GET /coding/1/ HTTP/1.1" 404 12417
+[2024-02-22 16:57:19] INFO /Users/beomtaehyeon/Documents/GitHub_Clon/pyblog_ubuntu/myapp/coding/models.py changed, reloading.
+[2024-02-22 16:57:19] INFO Watching for file changes with StatReloader
+[2024-02-22 16:58:06] WARNING Not Found: /coding/1/
+[2024-02-22 16:58:06] WARNING "GET /coding/1/ HTTP/1.1" 404 12417
+[2024-02-22 16:58:45] INFO /Users/beomtaehyeon/Documents/GitHub_Clon/pyblog_ubuntu/myapp/coding/models.py changed, reloading.
+[2024-02-22 16:58:46] INFO Watching for file changes with StatReloader
+[2024-02-22 16:58:49] WARNING Not Found: /coding/1/
+[2024-02-22 16:58:49] WARNING "GET /coding/1/ HTTP/1.1" 404 12417
+[2024-02-22 16:58:53] WARNING Not Found: /coding/0/
+[2024-02-22 16:58:53] WARNING "GET /coding/0/ HTTP/1.1" 404 12417
+[2024-02-22 16:58:59] WARNING Not Found: /coding/1/
+[2024-02-22 16:58:59] WARNING "GET /coding/1/ HTTP/1.1" 404 12417
+[2024-02-22 17:02:03] INFO Watching for file changes with StatReloader
+[2024-02-22 17:02:06] WARNING Not Found: /coding/1/
+[2024-02-22 17:02:06] WARNING "GET /coding/1/ HTTP/1.1" 404 12417
+[2024-02-22 17:02:10] WARNING Not Found: /coding/
+[2024-02-22 17:02:10] WARNING "GET /coding/ HTTP/1.1" 404 12409
+[2024-02-22 17:02:13] INFO "GET /admin/ HTTP/1.1" 200 17755
+[2024-02-22 17:02:16] INFO "GET /admin/coding/pycoding/ HTTP/1.1" 200 17412
+[2024-02-22 17:02:16] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-22 17:02:18] INFO "GET /admin/coding/pycoding/1/change/ HTTP/1.1" 200 21041
+[2024-02-22 17:02:18] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-22 17:02:19] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 19
+[2024-02-22 17:02:28] ERROR Internal Server Error: /admin/r/10/1/
+Traceback (most recent call last):
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/contrib/admin/sites.py", line 261, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/contrib/contenttypes/views.py", line 35, in shortcut
+    absurl = get_absolute_url()
+             ^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/Documents/GitHub_Clon/pyblog_ubuntu/myapp/coding/models.py", line 23, in get_absolute_url
+    if not self.is_root():
+           ^^^^^^^^^^^^
+AttributeError: 'PyCoding' object has no attribute 'is_root'
+[2024-02-22 17:02:28] ERROR "GET /admin/r/10/1/ HTTP/1.1" 500 97728
+[2024-02-22 17:04:26] WARNING Not Found: /coding/1/
+[2024-02-22 17:04:26] WARNING "GET /coding/1/ HTTP/1.1" 404 12417
+[2024-02-22 17:04:27] WARNING Not Found: /coding/1/
+[2024-02-22 17:04:27] WARNING "GET /coding/1/ HTTP/1.1" 404 12417
+[2024-02-22 17:13:00] WARNING Not Found: /coding/1/
+[2024-02-22 17:13:00] WARNING "GET /coding/1/ HTTP/1.1" 404 12417
+[2024-02-22 17:13:04] WARNING Not Found: /coding/1/
+[2024-02-22 17:13:04] WARNING "GET /coding/1/ HTTP/1.1" 404 12417
+[2024-02-22 17:18:14] WARNING Not Found: /coding/1/
+[2024-02-22 17:18:14] WARNING "GET /coding/1/ HTTP/1.1" 404 12417
+[2024-02-22 17:19:44] INFO /Users/beomtaehyeon/Documents/GitHub_Clon/pyblog_ubuntu/config/urls.py changed, reloading.
+[2024-02-22 17:19:44] INFO Watching for file changes with StatReloader
+[2024-02-22 17:19:48] INFO "GET /coding/1/ HTTP/1.1" 200 15238
+[2024-02-22 17:45:03] INFO Watching for file changes with StatReloader
+[2024-02-22 17:45:09] INFO "GET /admin/ HTTP/1.1" 200 17755
+[2024-02-22 17:45:11] INFO "GET /admin/blog/pyblog/ HTTP/1.1" 200 18777
+[2024-02-22 17:45:11] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-22 17:45:13] INFO "GET /admin/blog/pyblogdetail/ HTTP/1.1" 200 17917
+[2024-02-22 17:45:13] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-22 17:45:14] INFO "GET /admin/blog/pyblogdetail/1/change/ HTTP/1.1" 200 20464
+[2024-02-22 17:45:15] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-22 17:45:21] INFO "GET /admin/blog/pyblogdetail/ HTTP/1.1" 200 17918
+[2024-02-22 17:45:21] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-22 17:45:22] INFO "GET /admin/blog/pyblogdetail/2/change/ HTTP/1.1" 200 20504
+[2024-02-22 17:45:23] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-22 17:45:26] INFO "GET /admin/blog/pyblogdetail/ HTTP/1.1" 200 17917
+[2024-02-22 17:45:28] INFO "GET /admin/blog/pyblogdetail/3/change/ HTTP/1.1" 200 20561
+[2024-02-22 17:45:28] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-22 17:45:39] INFO "GET /admin/blog/pyblogdetail/ HTTP/1.1" 200 17917
+[2024-02-22 17:45:40] INFO "GET /admin/blog/pyblogdetail/3/change/ HTTP/1.1" 200 20561
+[2024-02-22 17:45:41] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-22 17:45:44] INFO "POST /admin/blog/pyblogdetail/3/change/ HTTP/1.1" 302 0
+[2024-02-22 17:45:44] INFO "GET /admin/blog/pyblogdetail/ HTTP/1.1" 200 18154
+[2024-02-22 17:45:44] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-22 17:46:01] INFO "GET /blogs/ HTTP/1.1" 200 15197
+[2024-02-22 17:46:04] INFO SELECT `py_blog`.`id`, `py_blog`.`title`, `py_blog`.`update_dt`, `py_blog`.`regist_dt` FROM `py_blog` WHERE `py_blog`.`id` = 1
+[2024-02-22 17:46:04] INFO "GET /blog/1 HTTP/1.1" 200 18429
+[2024-02-22 17:46:04] WARNING Not Found: /Users/beomtaehyeon/Documents/GitHub_Clon/pyblog_ubuntu/myapp/media/mad_pumpkin_icon.jpeg
+[2024-02-22 17:46:04] WARNING "GET /Users/beomtaehyeon/Documents/GitHub_Clon/pyblog_ubuntu/myapp/media/mad_pumpkin_icon.jpeg HTTP/1.1" 404 12923
+[2024-02-22 17:47:53] INFO "GET /admin/ HTTP/1.1" 200 18071
+[2024-02-22 17:47:55] INFO "GET /admin/blog/pyblogdetail/ HTTP/1.1" 200 17917
+[2024-02-22 17:47:55] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-22 17:48:45] INFO "GET /admin/blog/pyblogdetail/3/change/ HTTP/1.1" 200 20659
+[2024-02-22 17:48:45] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-22 17:48:50] INFO "POST /admin/blog/pyblogdetail/3/change/ HTTP/1.1" 302 0
+[2024-02-22 17:48:50] INFO "GET /admin/blog/pyblogdetail/ HTTP/1.1" 200 18154
+[2024-02-22 17:48:50] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-22 17:48:57] INFO "GET /blogs/ HTTP/1.1" 200 15196
+[2024-02-22 17:49:02] INFO SELECT `py_blog`.`id`, `py_blog`.`title`, `py_blog`.`update_dt`, `py_blog`.`regist_dt` FROM `py_blog` WHERE `py_blog`.`id` = 1
+[2024-02-22 17:49:02] INFO "GET /blog/1 HTTP/1.1" 200 18348
+[2024-02-22 17:49:02] WARNING Not Found: /Users/beomtaehyeon/Desktop/mad_pumpkin_icon.jpeg
+[2024-02-22 17:49:02] WARNING "GET /Users/beomtaehyeon/Desktop/mad_pumpkin_icon.jpeg HTTP/1.1" 404 12764

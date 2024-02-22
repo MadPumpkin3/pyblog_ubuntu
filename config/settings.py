@@ -36,6 +36,7 @@ SITE_ID = 1
 
 INSTALLED_APPS = [
     'myapp.blog',
+    'myapp.coding',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -103,7 +104,7 @@ DATABASES = {
         'USER': 'pyblog',
         'PASSWORD': '2150',
         # 현재 호스트(IP)가 유동 IP라서 AWS 재시동시 수정해야 함.
-        'HOST': '3.38.115.107',
+        'HOST': '3.34.145.43',
         'PORT': '3306',
     }
 }
@@ -148,6 +149,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'myapp/static')]
 STATICFILES_FINDERS = ["django.contrib.staticfiles.finders.FileSystemFinder", "django.contrib.staticfiles.finders.AppDirectoriesFinder",]
+
+MEDIA_URL = "media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, 'myapp/media')
 
 LOGGING = {
     'version' : 1,

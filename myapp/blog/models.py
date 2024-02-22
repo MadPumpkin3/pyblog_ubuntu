@@ -29,6 +29,8 @@ class PyBlogDetail(models.Model):
      img_url = models.CharField(max_length=200, blank=True, null=True)
      img_size = models.CharField(max_length=3, blank=True, null=True)
      content_body = models.TextField(blank=True, null=True)
+    # 아래는 관리자 페이지에서 마크업 작업과 예시를 보여주기 위한 코드임(사용하려면 null에 대한 데이터 입력이 수동으로 필요함.)
+    #  content_body = MarkdownxField()
 
      class Meta:
          managed = True

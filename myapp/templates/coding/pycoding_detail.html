@@ -1,0 +1,36 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load extr_blog %}
+
+{% block content %}
+<div class="'d-sm-flex align-items-conter justify-content-between mb-4">
+    <h1 id="title_text" class="h3 mb-0 text-gray-800"><span id="{{pageInfo.title}}">{{pageInfo.title}}</span></h1>
+</div>
+
+<!-- Content Row -->
+<div class="row">
+    <div class="col-lg-8 mb-4">
+        <!-- Illustrations -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h2 class="m-1 font-weight-bold text-dark"><span id="{{pageInfo.sub_title}}">{{pageInfo.sub_title}}</span></h2>
+            </div>
+            <div class="card-body">
+                {% if pageInfo.img_url %}
+                <div class="text-conter">
+                    <!-- style 부분 문제 있음 (추후 수정 필요) -->
+                    <!-- <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: {{pageInfo.img_size}}rem;" src="{{pageInfo.img_url}}" title="pageInfo.sub_title"/> -->
+                    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="{{pageInfo.img_url}}" title="pageInfo.sub_title"/>
+                </div>
+                {% endif %}
+                <!-- content start -->
+                <div class="mb-2 pl-4">
+                    {{ pageInfo.content_body|formatted_markdown }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- END Row -->
+{% endblock %}
