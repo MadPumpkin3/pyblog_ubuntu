@@ -178,3 +178,447 @@ AttributeError: 'PyCoding' object has no attribute 'is_root'
 [2024-02-22 17:49:02] INFO "GET /blog/1 HTTP/1.1" 200 18348
 [2024-02-22 17:49:02] WARNING Not Found: /Users/beomtaehyeon/Desktop/mad_pumpkin_icon.jpeg
 [2024-02-22 17:49:02] WARNING "GET /Users/beomtaehyeon/Desktop/mad_pumpkin_icon.jpeg HTTP/1.1" 404 12764
+[2024-02-23 15:45:52] INFO Watching for file changes with StatReloader
+[2024-02-23 15:45:57] INFO "GET / HTTP/1.1" 200 16025
+[2024-02-23 15:46:03] INFO "GET /blogs/ HTTP/1.1" 200 15883
+[2024-02-23 15:46:05] INFO SELECT `py_blog`.`id`, `py_blog`.`title`, `py_blog`.`update_dt`, `py_blog`.`regist_dt` FROM `py_blog` WHERE `py_blog`.`id` = 1
+[2024-02-23 15:46:05] INFO "GET /blog/1 HTTP/1.1" 200 18170
+[2024-02-23 15:46:06] WARNING Not Found: /Users/beomtaehyeon/Desktop/mad_pumpkin_icon.jpeg
+[2024-02-23 15:46:06] WARNING "GET /Users/beomtaehyeon/Desktop/mad_pumpkin_icon.jpeg HTTP/1.1" 404 12763
+[2024-02-23 15:48:13] INFO "GET /admin/ HTTP/1.1" 200 18386
+[2024-02-23 15:48:13] WARNING Not Found: /favicon.ico
+[2024-02-23 15:48:13] WARNING "GET /favicon.ico HTTP/1.1" 404 12616
+[2024-02-23 15:48:29] ERROR Internal Server Error: /admin/coding/pycoding/
+Traceback (most recent call last):
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'py_coding.path' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/contrib/admin/options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/treebeard/admin.py", line 49, in changelist_view
+    return super().changelist_view(request, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/contrib/admin/options.py", line 2068, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/models/query.py", line 376, in __len__
+    self._fetch_all()
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/models/query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1395, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/debug_toolbar/panels/sql/tracking.py", line 252, in execute
+    return self._record(super().execute, sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/debug_toolbar/panels/sql/tracking.py", line 177, in _record
+    return method(sql, params)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'py_coding.path' in 'field list'")
+[2024-02-23 15:48:29] ERROR "GET /admin/coding/pycoding/ HTTP/1.1" 500 209161
+[2024-02-23 15:48:33] INFO "GET /admin/ HTTP/1.1" 200 18386
+[2024-02-23 15:48:34] INFO "GET /admin/blog/pyblog/ HTTP/1.1" 200 18777
+[2024-02-23 15:48:34] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-23 15:48:35] INFO "GET /admin/ HTTP/1.1" 200 18386
+[2024-02-23 15:48:36] INFO "GET /admin/blog/pyblogdetail/ HTTP/1.1" 200 17917
+[2024-02-23 15:48:36] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-23 15:48:37] INFO "GET /admin/ HTTP/1.1" 200 18386
+[2024-02-23 15:48:37] ERROR Internal Server Error: /admin/coding/pycoding/
+Traceback (most recent call last):
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'py_coding.path' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/contrib/admin/options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/treebeard/admin.py", line 49, in changelist_view
+    return super().changelist_view(request, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/contrib/admin/options.py", line 2068, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/models/query.py", line 376, in __len__
+    self._fetch_all()
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/models/query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1395, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/debug_toolbar/panels/sql/tracking.py", line 252, in execute
+    return self._record(super().execute, sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/debug_toolbar/panels/sql/tracking.py", line 177, in _record
+    return method(sql, params)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'py_coding.path' in 'field list'")
+[2024-02-23 15:48:37] ERROR "GET /admin/coding/pycoding/ HTTP/1.1" 500 209160
+[2024-02-23 15:53:40] INFO "GET /blogs/ HTTP/1.1" 200 15859
+[2024-02-23 15:56:32] INFO "GET /blogs/ HTTP/1.1" 200 16117
+[2024-02-23 15:56:32] INFO "GET /static/favicon.ico HTTP/1.1" 304 0
+[2024-02-23 15:58:26] INFO "GET /blogs/ HTTP/1.1" 200 16117
+[2024-02-23 15:58:29] INFO "GET / HTTP/1.1" 200 16258
+[2024-02-23 15:58:31] INFO SELECT `py_blog`.`id`, `py_blog`.`title`, `py_blog`.`update_dt`, `py_blog`.`regist_dt` FROM `py_blog` WHERE `py_blog`.`id` = 1
+[2024-02-23 15:58:31] INFO "GET /blog/1 HTTP/1.1" 200 18403
+[2024-02-23 15:58:31] WARNING Not Found: /Users/beomtaehyeon/Desktop/mad_pumpkin_icon.jpeg
+[2024-02-23 15:58:31] WARNING "GET /Users/beomtaehyeon/Desktop/mad_pumpkin_icon.jpeg HTTP/1.1" 404 12764
+[2024-02-23 16:00:27] INFO "GET /blogs/ HTTP/1.1" 200 15883
+[2024-02-23 16:44:36] INFO Watching for file changes with StatReloader
+[2024-02-23 16:44:41] INFO "GET /admin/ HTTP/1.1" 200 18387
+[2024-02-23 16:44:43] INFO "GET /admin/blog/pyblog/ HTTP/1.1" 200 18777
+[2024-02-23 16:44:43] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-23 16:44:45] ERROR Internal Server Error: /admin/coding/pycoding/
+Traceback (most recent call last):
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'py_coding.path' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/contrib/admin/options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/treebeard/admin.py", line 49, in changelist_view
+    return super().changelist_view(request, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/contrib/admin/options.py", line 2068, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/models/query.py", line 376, in __len__
+    self._fetch_all()
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/models/query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1395, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/debug_toolbar/panels/sql/tracking.py", line 252, in execute
+    return self._record(super().execute, sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/debug_toolbar/panels/sql/tracking.py", line 177, in _record
+    return method(sql, params)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'py_coding.path' in 'field list'")
+[2024-02-23 16:44:45] ERROR "GET /admin/coding/pycoding/ HTTP/1.1" 500 209172
+[2024-02-23 17:02:23] INFO Watching for file changes with StatReloader
+[2024-02-23 17:02:28] INFO "GET /admin/ HTTP/1.1" 200 18387
+[2024-02-23 17:02:30] INFO "GET /admin/blog/pyblog/ HTTP/1.1" 200 18777
+[2024-02-23 17:02:30] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-23 17:02:34] INFO "GET /admin/blog/pyblog/1/change/ HTTP/1.1" 200 32289
+[2024-02-23 17:02:35] INFO "GET /static/markdownx/admin/css/markdownx.css HTTP/1.1" 304 0
+[2024-02-23 17:02:35] INFO "GET /static/markdownx/js/markdownx.js HTTP/1.1" 304 0
+[2024-02-23 17:02:35] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-23 17:02:35] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 115
+[2024-02-23 17:02:35] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 0
+[2024-02-23 17:02:35] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 0
+[2024-02-23 17:02:35] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 0
+[2024-02-23 17:02:35] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 0
+[2024-02-23 17:02:42] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 115
+[2024-02-23 17:02:42] INFO "GET /__debug__/history_sidebar/?store_id=d246bf789eca416d9f4649c44bc1b6ca HTTP/1.1" 200 9519
+[2024-02-23 17:02:46] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 114
+[2024-02-23 17:02:46] INFO "GET /__debug__/history_sidebar/?store_id=8a44afed88f14d86ade3b7c3888daa2f HTTP/1.1" 200 9519
+[2024-02-23 17:02:48] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 114
+[2024-02-23 17:02:48] INFO "GET /__debug__/history_sidebar/?store_id=b53f67cf807f45888138e151f01e904b HTTP/1.1" 200 9519
+[2024-02-23 17:02:54] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 142
+[2024-02-23 17:02:54] INFO "GET /__debug__/history_sidebar/?store_id=e37c95ef87074f9293235b4dbb3d5dae HTTP/1.1" 200 9519
+[2024-02-23 17:02:56] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 148
+[2024-02-23 17:02:56] INFO "GET /__debug__/history_sidebar/?store_id=8c4f128495874c2cb1d1f7abf1f25dad HTTP/1.1" 200 9519
+[2024-02-23 17:03:01] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 168
+[2024-02-23 17:03:01] INFO "GET /__debug__/history_sidebar/?store_id=c56d8cfc06124a4fb1557ef0b99828cd HTTP/1.1" 200 9519
+[2024-02-23 17:03:09] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 168
+[2024-02-23 17:03:09] INFO "GET /__debug__/history_sidebar/?store_id=c726ecbaadc048858a7e5fdc70068bed HTTP/1.1" 200 9519
+[2024-02-23 17:03:12] INFO "POST /admin/blog/pyblog/1/change/ HTTP/1.1" 302 0
+[2024-02-23 17:03:12] INFO "GET /admin/blog/pyblog/ HTTP/1.1" 200 18995
+[2024-02-23 17:03:12] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-23 17:03:14] ERROR Internal Server Error: /admin/coding/pycoding/
+Traceback (most recent call last):
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'py_coding.path' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/contrib/admin/options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/treebeard/admin.py", line 49, in changelist_view
+    return super().changelist_view(request, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/contrib/admin/options.py", line 2068, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/models/query.py", line 376, in __len__
+    self._fetch_all()
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/models/query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1395, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/debug_toolbar/panels/sql/tracking.py", line 252, in execute
+    return self._record(super().execute, sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/debug_toolbar/panels/sql/tracking.py", line 177, in _record
+    return method(sql, params)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'py_coding.path' in 'field list'")
+[2024-02-23 17:03:14] ERROR "GET /admin/coding/pycoding/ HTTP/1.1" 500 209173
+[2024-02-23 17:05:13] INFO "GET /__debug__/render_panel/?store_id=41df5c099e0a4ba191248d5893baae59&panel_id=RequestPanel HTTP/1.1" 200 2280
+[2024-02-23 17:06:12] INFO "GET /__debug__/render_panel/?store_id=41df5c099e0a4ba191248d5893baae59&panel_id=SQLPanel HTTP/1.1" 200 77643
+[2024-02-23 17:06:48] INFO "GET /blogs/ HTTP/1.1" 200 15883
+[2024-02-23 17:06:50] INFO SELECT `py_blog`.`id`, `py_blog`.`title`, `py_blog`.`update_dt`, `py_blog`.`regist_dt` FROM `py_blog` WHERE `py_blog`.`id` = 1
+[2024-02-23 17:06:50] INFO "GET /blog/1 HTTP/1.1" 200 18223
+[2024-02-23 17:06:51] WARNING Not Found: /Users/beomtaehyeon/Desktop/mad_pumpkin_icon.jpeg
+[2024-02-23 17:06:51] WARNING "GET /Users/beomtaehyeon/Desktop/mad_pumpkin_icon.jpeg HTTP/1.1" 404 12763

@@ -15,3 +15,6 @@ django-markdownx==4.0.7
 
 # 마크다운의 구문강조(코드를 보기 좋게 만들어줌)
 Pygments==2.17.2
+
+# 트리구조 메뉴 만들 수 있는 패키지
+django-treebeard-4.7.1

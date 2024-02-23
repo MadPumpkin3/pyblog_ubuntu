@@ -30,6 +30,55 @@
             </div>
         </div>
     </div>
+    {% if pageInfo.get_previous or pageInfo.get_next %}
+        <div class="col-lg-4 mb-4">
+            <div id="right_menu" class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-info shadow h-100 py-2">
+                    <div class="card-dody">
+                        <div class="row no-gutters align-items-conter">
+                            <div class="col">
+                                {% if pageInfo.get_previous %}
+                                    <div>
+                                        <span class="h6 mb-1 font-weight-bold anchor_link">
+                                            <a href="{{pageInfo.get_previous.get_absolute_url}}">{{pageInfo.get_previous}}</a>
+                                        </span>
+                                    </div>
+                                {% endif %}
+                                <hr class="d-none d-md-block">
+
+                                <div> <span class="h6 mb-1 font-weight-bold anchor_link"><a href="#{{pageInfo.title}}">{{pageInfo.title}}</a> </span></div>
+                                <div>
+                                    <span class="h6 mb-1 font-weight-bold anchor_link active">
+                                        <a href="#{{pageInfo.sub_title}}">{{pageInfo.sub_title}}</a>
+                                    </span>
+                                </div>
+                                <hr class="d-none d-md-block">
+                                {% if pageInfo.get_next %}
+                                    <div>
+                                        <span class="h6 mb-1 font-weight-bold anchor_link">
+                                            <a href="{{pageInfo.get_next.get_absolute_url}}">{{pageInfo.get_next}}</a>
+                                        </span>
+                                    </div>
+                                {% endif %}
+                            </div><!--<div class="col mr-2">-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>
+<div class="row">
+    <div class="col-lg-8 mb-4">
+        <div class="card shadow mb-4">
+            {% if pageInfo.get_previous %}
+            <div class="card-body"><span class="font-weight-bold text-gray-800">이전글</span> : <span class="text-primary font-weight-bold"><a href="{{pageInfo.get_previous.get_absolute_url}}">{{pageInfo.get_prev_sibling}}</a></span></div>
+            {% endif %}
+            {% if pageInfo.get_next %}
+            <div class="card-body"><span class="font-weight-bold text-gray-800">다음글</span> : <span class="text-primary font-weight-bold"><a href="{{pageInfo.get_next.get_absolute_url}}">{{pageInfo.get_next_sibling}}</a></span></div>
+            {% endif %}
+        </div>
+    </div>
 </div>
 
 <!-- END Row -->
