@@ -20,10 +20,19 @@ from django.contrib.sitemaps.views import sitemap
 from django.views.generic import TemplateView
 from config.sitemaps import PythonBlogSitemap
 
+# 404와 500 오류 시 보여주는 페이지 구현
+from myapp.common.common_views import customHandler404
+
+handler404 = customHandler404.as_view()
+
+handler500 = 'myapp.common.common_views.handler500'
+
+# 사이트 내에 탐색 및 검색을 위해 필요한 구글과 연동이 필요하고, 구글에 사이트 내에 페이지들을 알려주기 위함.
 sitemaps = {
     'blog': PythonBlogSitemap,
 }
 
+# 기본 url 등록
 urlpatterns = [
     # 검색엔진이 내 사이트 내에 있는 페이지들을 파악할 수 있게 sitemap을 만들어서 제공
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
@@ -36,6 +45,7 @@ urlpatterns = [
     path('markdownx/', include('markdownx.urls')),
 ]
 
+# 세팅 파일에 디버그 옵션이 True로 되어 있다면 디버그 프로그램을 사용하도록 해주는 코드
 if settings.DEBUG:
    import debug_toolbar
    urlpatterns += [

@@ -17,13 +17,16 @@
                         <div class="text-center">
                             <!-- style 부분 추후 수정 필요(작동에는 문제 없음)-->
                             <!-- <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: {{ list.pb_detail__img_size }}rem;" src="{{ list.pb_detail__img_url }}"/> -->
-                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="{{ list.pb_detail__img_url }}"/>
+                            <img class="lazyload" data-src="{{ list.pb_detail__img_url }}"/>
                         </div>
                         {% endif %}
 
                         <div class="mb-2 pl-4">{{ list.pb_detail__content_body|formatted_markdown }}</div>
                     </div>
                 {% endfor %}
+                <div class="card-body">
+                    {% include 'base/sharing.html' %}
+                </div>
                 </div>
             </div>
         </div>

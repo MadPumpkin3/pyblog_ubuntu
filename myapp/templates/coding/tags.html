@@ -1,0 +1,33 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load extr_blog %}
+{% block content %}
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 id="title_text" class="h3 mb-0 text-gray-800"><span id="{{pageInfo.title}}">"{{q}}" TAG LIST</span> </h1>
+</div>
+<!-- Content Row -->
+<div class="row">
+    <div class="col-lg-8 mb-4">
+        <!-- Illustrations -->
+            <div class="card shadow mb-4">
+                <div class="card-dody">
+                    {% for dbj in object_list %}
+                    <div class="section">
+                        <div class="figure">
+                            <a href="{{obj.get_absoute_url}}">
+                                <img class="img-fluid px-1 px-sm-1 mt-1 mb-1" style="width: 10rem;" src="{{obj.img_url}}" title="{{obj.title}}" align="top"/>
+                            </a>
+                        </div>
+                        <div class="px-1 px-sm-1 mt-1 mb-1">
+                            <a href="{{obj.get_absoute_url}}"><span>{{obj.title}}</span></a>
+                            <p>{{obj.get_descript}}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+    </div>
+</div>
+{% endblock %}
+{% block livere %}
+{% endblock %}

@@ -20,7 +20,7 @@
                 <div class="text-conter">
                     <!-- style 부분 문제 있음 (추후 수정 필요) -->
                     <!-- <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: {{pageInfo.img_size}}rem;" src="{{pageInfo.img_url}}" title="pageInfo.sub_title"/> -->
-                    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" src="{{pageInfo.img_url}}" title="pageInfo.sub_title"/>
+                    <img class="lazyload" data-src="{{pageInfo.img_url}}" title="pageInfo.sub_title"/>
                 </div>
                 {% endif %}
                 <!-- content start -->

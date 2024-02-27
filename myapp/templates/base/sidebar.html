@@ -1,50 +1,55 @@
-    <!-- Sidebar -->
+<!-- Sidebar -->
 
-    <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">  
-        <!-- Nav Item menu_coding-->
-        <li id="menu_coding" class="nav-item side_line mt-7" >
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCoding" aria-expanded="false" aria-controls="collapseCoding">
-                <i class="fas fa-fw fa-wrench"></i>
-                <span id="pycodingT">Python 코딩</span>
-            </a>
-            <ol id="collapseCoding" class="navbar-nav collapse" aria-labelledby="pycodingT" data-parent="#accordionSidebar">
-                <li class="bg-white py-2 collapse-inner rounded">
-                    {% for list in coding_menu %}
-                        {% if list.is_root %}
-                            <h6 class="collapse-header">{{list.title}}</h6>
-                        {% endif %}
-                        {% if not list.is_root %}
-                            <a id="col-item-coding{{list.id}}" class="collapse-item pl-4" href="{{ list.get_absolute_url }}">{{list.title}}</a>
-                        {% endif %}
-                    {% endfor %}
-                </li>
-            </ol>
-        </li>
-    </ul>
+<!-- 내가 조합해서 만들어본 사이드바 -->
+<div id="layoutSidenav_nav">
+    <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+        <div class="sb-sidenav-menu">
+                {% for list in coding_menu %}
+                    {% if list.is_root %}
+                    <a class="nav-link">
+                        <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            {{list.title}}
+                    </a>
+                    {% endif %}
+                    {% if not list.is_root %}
+                    <a class="nav-link" href="{{ list.get_absolute_url }}">
+                        <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            {{list.title}}
+                    </a>
+                    {% endif %}
+                {% endfor %}
+ 
+        </div>
+    </nav>
+</div>
 
-    <!-- <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
-        <a class="sidebar-brand d-flex align-items-center justify-content-conter" href="/">
-            <div class="sidebar-brand-icon rotate-n-15">
-                <i class="fab fa-palfed"></i>
-            </div>
-            <div class="sidebar-brand-text mx-3">Python Blog<sup>$</sup></div>
+<!-- 트리구조가 잘 구현된 기존 사이드 바 -->
+<!-- <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+    <a class="sidebar-brand d-flex align-items-center justify-content-conter" href="/">
+        <div class="sidebar-brand-icon rotate-n-15">
+            <i class="fab fa-palfed"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">Python Blog<sup>$</sup></div>
+    </a>
+
+    <li id="menu-coding" class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true"
+            aria-controls="collapseUtilities">
+            <i class="fas fa-fw fa-wrench"></i>
         </a>
-        <li id="menu-coding" class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true"
-                aria-controls="collapseUtilities">
-                <i class="fas fa-fw fa-wrench"></i>
-            </a>
-            <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    {% for list in coding_menu %}
-                        {% if list.is_root %}
-                            <h6 class="collapse-header">{{list.title}}</h6>
-                        {% endif %}
-                        {% if not list.is_root %}
-                            <a id="col-item-coding{{list.id}}" class="collapse-item pl-4" href="{{ list.get_absolute_url }}">{{list.title}}</a>
-                        {% endif %}
-                    {% endfor %}
-                </div>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                {% for list in coding_menu %}
+                    {% if list.is_root %}
+                        <h6 class="collapse-header">{{list.title}}</h6>
+                    {% endif %}
+                    {% if not list.is_root %}
+                        <a id="col-item-coding{{list.id}}" class="collapse-item pl-4" href="{{ list.get_absolute_url }}">{{list.title}}</a>
+                    {% endif %}
+                {% endfor %}
             </div>
-        </li>
-    </ul> -->
+        </div>
+    </li>
+</ul> -->
+
+

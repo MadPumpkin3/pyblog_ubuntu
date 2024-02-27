@@ -1,0 +1,15 @@
+<!-- 포스팅 내보내는 html -->
+
+<div class="share-wrapper text-right">
+    <span class="share-label text-muted mr-1">Share</span>
+    <span class="share-icons">
+      <a href="https://twitter.com/intent/tweet?text={{pageInfo.title}}&url=https://{{request.get_host}}{{request.get_full_path}}" data-toggle="tooltip" data-placement="top" title="" target="_blank" rel="noopener" aria-label="Twitter" data-original-title="Twitter">
+      <i class="fa-fw fab fa-twitter"></i>
+      </a>
+      <a href="https://www.facebook.com/sharer/sharer.php?title={{pageInfo.title}}&u=https://{{request.get_host}}{{request.get_full_path}}" data-toggle="tooltip" data-placement="top" title="" target="_blank" rel="noopener" aria-label="Facebook" data-original-title="Facebook">
+      <i class="fa-fw fab fa-facebook-square"></i>
+      </a>
+      <i id="copy-link" class="fa-fw fas fa-link small" data-toggle="tooltip" data-placement="top" title="" data-title-succeed="Link copied successfully!" data-original-title="Copy link">
+      </i>
+  </span>
+  </div>
