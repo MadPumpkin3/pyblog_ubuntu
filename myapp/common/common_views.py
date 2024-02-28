@@ -33,3 +33,57 @@ class TagMixin(object):
         if q:
             return queryset.filter(tags__icontains=q)
         return queryset
+    
+# naver cloud platform
+import json
+import requests
+import time
+import base64
+import hashlib
+import hmac
+from django.http import HttpResponse
+
+class NaverOutboundMailer(generic.TemplateView):
+    def __init__(self):
+        self.ncp_access_key = 'CSUAq1nV17VOVLNoa8Oc'
+        self.ncp_secret_key = 'LDZFX2wsUlVDWskXmvWnlhHCu9EoiImHt88bTDYJ'
+        self.ncp_mail_url = 'https://mail.apigw.ntruss.com/api/v1/mails'
+        self.ncp_sig_url = '/api/v1/mails'
+        
+    def post(self, request, *args, **kwargs):
+        return self.send(request.POST['mailBody'])
+    
+    def send(self, mailBody):
+        self.timestamp = str(int(time.time() * 1000))
+        result = 'N'
+        if self.make_signature():
+            try:
+                data = """ {"templateSid": 7696,
+                            "recipients": [{"address": "fpdjxpa37@gmail.com",
+                            "name": "bumtaehyeon",
+                            "type": "R",
+                            "parameters": {"q": "%s"}],
+                            "individual":true,
+                            "advertising": false
+                    }""" % str(mailBody)
+                    
+                headers = {"Content-Type":'application/json', "x-ncp-apigw-timestamp":self.timestamp, "x-ncp-iam-access-key":self.ncp_access_key, "x-ncp-apigw-signature-v2":self.signingKey}
+                response = requests.post(self.ncp_mail_url, headers=headers, data=data.encode('utf-8'))
+                rescode = response.status_code
+                
+                if(rescode==201):
+                    result = json.loads(response.text)
+            except Exception as e:
+                print("mail send: ", e)
+        return HttpResponse(json.dumps({"isSend":result}), content_type="application/json")
+    
+    def make_signature(self):
+        try:
+            secret_key = bytes(self.ncp_secret_key, 'UTF-8')
+            method = "POST"
+            message = method + " " + self.ncp_sig_url + "\n" + self.timestamp + "\n" + self.ncp_access_key
+            message = bytes(message, 'UTF-8')
+            self.signingKey = base64.b64encode(hmac.new(secret_key, message, digestmod=hashlib.sha256).digest())
+            return True
+        except Exception as e:
+            return False

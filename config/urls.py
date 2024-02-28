@@ -43,6 +43,8 @@ urlpatterns = [
     path('', include('myapp.coding.urls')),
     # 마크다운 기능을 등록
     path('markdownx/', include('markdownx.urls')),
+    # 네이버 메일 전송
+    path('', include('myapp.common.common_urls')),
 ]
 
 # 세팅 파일에 디버그 옵션이 True로 되어 있다면 디버그 프로그램을 사용하도록 해주는 코드

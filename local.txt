@@ -17,4 +17,7 @@ django-markdownx==4.0.7
 Pygments==2.17.2
 
 # 트리구조 메뉴 만들 수 있는 패키지
-django-treebeard-4.7.1
+django-treebeard==4.7.1
+
+# 네이버 메일 서비스 사용을 위해 view작업 중 필요한 라이브러리
+requests==2.31.0

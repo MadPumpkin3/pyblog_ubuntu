@@ -1,12 +1,30 @@
 <footer class="py-4 bg-light mt-auto">
     <div class="container-fluid px-4">
         <div class="d-flex align-items-center justify-content-between small">
-            <div class="text-muted">Copyright &copy; Your Website 2023</div>
-            <div>
-                <a href="#">Privacy Policy</a>
-                &middot;
-                <a href="#">Terms &amp; Conditions</a>
+            <div>Copyright &copy; PythonBlog 2024 All rights reserved <br>
+                <span>Mail : <a href="#" data-target="#mail_pop" data-toggle="model">PYTHONBLOG</a></span>
             </div>
         </div>
     </div>
 </footer>
+<div class="modal fade" id="mail_pop">
+    <div class="modal-dialog">
+        <div class="modal-content"> 
+            <div class="modal-header">
+                <h4 class="modal-title">메일보내기</h4><br/>             
+                <button type="button" class="close" data-dismiss="modal">×</button>
+            </div>
+                <div class="modal-body form-floating">
+                    <form name="mailForm">
+                         {%csrf_token%}
+                         <textarea class="form-control" rows="5" placeholder="Write mail here" id="floatingTextarea"></textarea>
+                        <label for="floatingTextarea">블로그 제작자에게 보내는 메일입니다.</label>
+                    </form>
+                </div>          
+            <button class="btn btn-primary btn-log" onclick="fn_sendmail()">보내기</button>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark btn-sm" data-dismiss="modal">닫기</button>      
+            </div>
+        </div>
+    </div>
+</div>
