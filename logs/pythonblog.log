@@ -8811,3 +8811,257 @@ django.core.exceptions.ImproperlyConfigured: TemplateResponseMixin requires eith
 [2024-02-28 17:38:08] INFO SELECT `py_blog`.`id`, `py_blog`.`title`, `py_blog`.`update_dt`, `py_blog`.`regist_dt` FROM `py_blog` WHERE `py_blog`.`id` = 3
 [2024-02-28 17:38:08] INFO "GET /blog/3 HTTP/1.1" 200 20262
 [2024-02-28 17:38:08] INFO "GET /static/js/ncp_mail.js HTTP/1.1" 304 0
+[2024-02-29 15:15:58] INFO Watching for file changes with StatReloader
+[2024-02-29 15:16:05] INFO "GET /coding/1/ HTTP/1.1" 200 19141
+[2024-02-29 15:16:06] INFO "GET /static/js/lazysizes.min.js HTTP/1.1" 304 0
+[2024-02-29 15:16:06] INFO "GET /static/css/styles.css HTTP/1.1" 304 0
+[2024-02-29 15:16:06] INFO "GET /static/js/ncp_mail.js HTTP/1.1" 200 826
+[2024-02-29 15:17:00] INFO "GET /favicon.ico HTTP/1.1" 302 0
+[2024-02-29 15:17:00] INFO "GET /static/favicon.ico HTTP/1.1" 304 0
+[2024-02-29 15:21:27] INFO "GET /coding/1/ HTTP/1.1" 200 19140
+[2024-02-29 15:26:40] INFO "GET /coding/1/ HTTP/1.1" 200 19139
+[2024-02-29 15:26:42] INFO "GET /coding/1/ HTTP/1.1" 200 19139
+[2024-02-29 15:26:56] INFO "GET /coding/1/ HTTP/1.1" 200 19141
+[2024-02-29 15:32:19] INFO "GET /coding/1/ HTTP/1.1" 200 19140
+[2024-02-29 15:36:50] INFO "GET /coding/1/ HTTP/1.1" 200 19160
+[2024-02-29 15:37:05] INFO "GET /coding/1/ HTTP/1.1" 200 19159
+[2024-02-29 15:41:10] INFO "GET /coding/1/ HTTP/1.1" 200 19159
+[2024-02-29 15:41:42] INFO "GET /coding/1/ HTTP/1.1" 200 19161
+[2024-02-29 15:41:45] INFO "GET /coding/1/ HTTP/1.1" 200 19160
+[2024-02-29 16:22:57] INFO Watching for file changes with StatReloader
+[2024-02-29 16:23:02] INFO "GET /admin/ HTTP/1.1" 200 18224
+[2024-02-29 16:23:02] INFO "GET /favicon.ico HTTP/1.1" 302 0
+[2024-02-29 16:23:04] INFO "GET /admin/blog/pyblog/ HTTP/1.1" 200 19015
+[2024-02-29 16:23:04] INFO "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+[2024-02-29 16:23:04] INFO "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 288580
+[2024-02-29 16:23:04] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-29 16:23:06] ERROR Internal Server Error: /admin/blog/pyblog/2/change/
+Traceback (most recent call last):
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/contrib/admin/options.py", line 807, in get_form
+    return modelform_factory(self.model, **defaults)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/forms/models.py", line 648, in modelform_factory
+    return type(form)(class_name, (form,), form_class_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/forms/models.py", line 306, in __new__
+    fields = fields_for_model(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/forms/models.py", line 197, in fields_for_model
+    raise FieldError(
+django.core.exceptions.FieldError: 'regist_dt' cannot be specified for PyBlog model form as it is a non-editable field
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/contrib/admin/options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/contrib/admin/options.py", line 1893, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/contrib/admin/options.py", line 1750, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/contrib/admin/options.py", line 1786, in _changeform_view
+    ModelForm = self.get_form(
+                ^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/contrib/admin/options.py", line 809, in get_form
+    raise FieldError(
+django.core.exceptions.FieldError: 'regist_dt' cannot be specified for PyBlog model form as it is a non-editable field. Check fields/fieldsets/exclude attributes of class admin_pythonblog.
+[2024-02-29 16:23:06] ERROR "GET /admin/blog/pyblog/2/change/ HTTP/1.1" 500 146749
+[2024-02-29 16:24:18] INFO /Users/beomtaehyeon/Documents/GitHub_Clon/pyblog_ubuntu/myapp/blog/admin.py changed, reloading.
+[2024-02-29 16:24:19] INFO Watching for file changes with StatReloader
+[2024-02-29 16:24:22] INFO "GET /admin/blog/pyblog/2/change/ HTTP/1.1" 200 32645
+[2024-02-29 16:24:22] INFO "GET /static/markdownx/admin/css/markdownx.css HTTP/1.1" 200 4059
+[2024-02-29 16:24:22] INFO "GET /static/admin/js/inlines.js HTTP/1.1" 200 15526
+[2024-02-29 16:24:22] INFO "GET /static/markdownx/js/markdownx.js HTTP/1.1" 200 33556
+[2024-02-29 16:24:22] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-29 16:24:22] INFO "GET /static/admin/img/inline-delete.svg HTTP/1.1" 200 560
+[2024-02-29 16:24:22] INFO "GET /favicon.ico HTTP/1.1" 302 0
+[2024-02-29 16:24:22] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 18
+[2024-02-29 16:24:22] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 0
+[2024-02-29 16:24:22] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 0
+[2024-02-29 16:24:22] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 0
+[2024-02-29 16:24:22] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 0
+[2024-02-29 16:24:28] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 18
+[2024-02-29 16:24:28] INFO "GET /__debug__/history_sidebar/?store_id=91be85dc0eb34352836863a2db823d68 HTTP/1.1" 200 9519
+[2024-02-29 16:24:34] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 48
+[2024-02-29 16:24:34] INFO "GET /__debug__/history_sidebar/?store_id=c50fe8b6917242a0afd4cc0f3f45c217 HTTP/1.1" 200 9519
+[2024-02-29 16:24:39] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 48
+[2024-02-29 16:24:39] INFO "GET /__debug__/history_sidebar/?store_id=67956f31b73c452a9df197b071914263 HTTP/1.1" 200 9519
+[2024-02-29 16:26:07] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 48
+[2024-02-29 16:26:07] INFO "GET /__debug__/history_sidebar/?store_id=a4475b262dc54917b3fca5d4d87cd510 HTTP/1.1" 200 9518
+[2024-02-29 16:26:10] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 69
+[2024-02-29 16:26:10] INFO "GET /__debug__/history_sidebar/?store_id=4e6ff9b1a987466f95a4793f645f30e2 HTTP/1.1" 200 9519
+[2024-02-29 16:26:22] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 83
+[2024-02-29 16:26:22] INFO "GET /__debug__/history_sidebar/?store_id=99061ae3783c496b85253c8df00b4d61 HTTP/1.1" 200 9519
+[2024-02-29 16:26:23] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 83
+[2024-02-29 16:26:24] INFO "GET /__debug__/history_sidebar/?store_id=e45124652e5b4dc89f15c4421b221bff HTTP/1.1" 200 9519
+[2024-02-29 16:26:25] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 83
+[2024-02-29 16:26:26] INFO "GET /__debug__/history_sidebar/?store_id=016f28feff7546eaa0140e8df6da443b HTTP/1.1" 200 9519
+[2024-02-29 16:26:27] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 83
+[2024-02-29 16:26:28] INFO "GET /__debug__/history_sidebar/?store_id=a1bbe515bd90453ab7c7fec486df67c7 HTTP/1.1" 200 9519
+[2024-02-29 16:26:42] INFO "POST /admin/blog/pyblog/2/change/ HTTP/1.1" 302 0
+[2024-02-29 16:26:42] INFO "GET /admin/blog/pyblog/ HTTP/1.1" 200 19232
+[2024-02-29 16:26:42] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-29 16:26:48] INFO "GET /blogs/ HTTP/1.1" 200 17584
+[2024-02-29 16:26:52] INFO SELECT `py_blog`.`id`, `py_blog`.`title`, `py_blog`.`update_dt`, `py_blog`.`regist_dt`, `py_blog`.`use_yn` FROM `py_blog` WHERE (`py_blog`.`id` = 1 AND `py_blog`.`use_yn` = Y)
+[2024-02-29 16:26:52] INFO "GET /blog/1 HTTP/1.1" 200 20280
+[2024-02-29 16:26:55] ERROR Internal Server Error: /blog/2
+Traceback (most recent call last):
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/views/generic/list.py", line 174, in get
+    context = self.get_context_data()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/Documents/GitHub_Clon/pyblog_ubuntu/myapp/blog/views.py", line 31, in get_context_data
+    context['pageInfo'] = query_set[0]
+                          ~~~~~~~~~^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/models/query.py", line 446, in __getitem__
+    return qs._result_cache[0]
+           ~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+[2024-02-29 16:26:55] ERROR "GET /blog/2 HTTP/1.1" 500 93750
+[2024-02-29 16:26:59] INFO "GET /admin/blog/pyblog/ HTTP/1.1" 200 19014
+[2024-02-29 16:27:01] INFO "GET /admin/coding/pycoding/ HTTP/1.1" 200 19968
+[2024-02-29 16:27:01] INFO "GET /static/treebeard/treebeard-admin.js HTTP/1.1" 304 0
+[2024-02-29 16:27:01] INFO "GET /static/treebeard/treebeard-admin.css HTTP/1.1" 304 0
+[2024-02-29 16:27:01] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-29 16:27:01] INFO "GET /static/treebeard/expand-collapse.png HTTP/1.1" 304 0
+[2024-02-29 16:27:04] INFO "GET /admin/coding/pycoding/add/ HTTP/1.1" 200 21727
+[2024-02-29 16:27:04] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-29 16:27:04] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 0
+[2024-02-29 16:27:24] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 0
+[2024-02-29 16:27:24] INFO "GET /__debug__/history_sidebar/?store_id=49d5601059bc4347b8f37b1cb3b8c58d HTTP/1.1" 200 9519
+[2024-02-29 16:27:25] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 20
+[2024-02-29 16:27:25] INFO "GET /__debug__/history_sidebar/?store_id=fc0b7e1b4ece418bb4635c07701beb79 HTTP/1.1" 200 9519
+[2024-02-29 16:27:35] INFO "POST /admin/coding/pycoding/add/ HTTP/1.1" 200 21991
+[2024-02-29 16:27:35] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-29 16:27:35] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 20
+[2024-02-29 16:27:39] INFO "POST /admin/coding/pycoding/add/ HTTP/1.1" 302 0
+[2024-02-29 16:27:40] INFO "GET /admin/coding/pycoding/ HTTP/1.1" 200 20883
+[2024-02-29 16:27:40] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-29 16:27:42] INFO "GET /admin/coding/pycoding/3/change/ HTTP/1.1" 200 22252
+[2024-02-29 16:27:42] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-29 16:27:42] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 20
+[2024-02-29 16:32:05] INFO Watching for file changes with StatReloader
+[2024-02-29 16:32:10] INFO "GET /admin/coding/pycoding/ HTTP/1.1" 200 20665
+[2024-02-29 16:32:10] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-29 16:32:11] INFO "GET /admin/coding/pycoding/3/change/ HTTP/1.1" 200 22766
+[2024-02-29 16:32:12] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-29 16:32:12] INFO "POST /markdownx/markdownify/ HTTP/1.1" 200 20
+[2024-02-29 16:33:37] INFO /Users/beomtaehyeon/Documents/GitHub_Clon/pyblog_ubuntu/myapp/common/common_views.py changed, reloading.
+[2024-02-29 16:33:37] INFO Watching for file changes with StatReloader
+[2024-02-29 16:33:58] INFO /Users/beomtaehyeon/Documents/GitHub_Clon/pyblog_ubuntu/myapp/coding/views.py changed, reloading.
+[2024-02-29 16:33:58] INFO Watching for file changes with StatReloader
+[2024-02-29 16:34:18] INFO "POST /admin/coding/pycoding/3/change/ HTTP/1.1" 302 0
+[2024-02-29 16:34:18] INFO "GET /admin/coding/pycoding/ HTTP/1.1" 200 20882
+[2024-02-29 16:34:19] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 8911
+[2024-02-29 16:34:25] INFO "GET /coding/1/ HTTP/1.1" 200 19160
+[2024-02-29 16:34:31] INFO "GET /coding/4/ HTTP/1.1" 200 20899
+[2024-02-29 16:36:27] ERROR Internal Server Error: /coding/3/
+Traceback (most recent call last):
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/views/generic/detail.py", line 109, in get
+    context = self.get_context_data(object=self.object)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/Documents/GitHub_Clon/pyblog_ubuntu/myapp/coding/views.py", line 15, in get_context_data
+    queryset = PyCoding.objects.get(id=self.kwargs['pk'], use_yn = 'Y')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+myapp.coding.models.PyCoding.DoesNotExist: PyCoding matching query does not exist.
+[2024-02-29 16:36:27] ERROR "GET /coding/3/ HTTP/1.1" 500 97936
+[2024-02-29 16:37:26] INFO /Users/beomtaehyeon/Documents/GitHub_Clon/pyblog_ubuntu/myapp/coding/views.py changed, reloading.
+[2024-02-29 16:37:26] INFO Watching for file changes with StatReloader
+[2024-02-29 16:37:29] INFO /Users/beomtaehyeon/Documents/GitHub_Clon/pyblog_ubuntu/myapp/coding/views.py changed, reloading.
+[2024-02-29 16:37:29] INFO Watching for file changes with StatReloader
+[2024-02-29 16:37:33] INFO "GET /coding/2/ HTTP/1.1" 200 20917
+[2024-02-29 16:39:03] INFO /Users/beomtaehyeon/Documents/GitHub_Clon/pyblog_ubuntu/myapp/coding/views.py changed, reloading.
+[2024-02-29 16:39:03] INFO Watching for file changes with StatReloader
+[2024-02-29 16:39:07] INFO "GET /coding/2/ HTTP/1.1" 200 19123
+[2024-02-29 16:39:09] INFO "GET /coding/2/ HTTP/1.1" 200 19122
+[2024-02-29 16:39:11] INFO "GET /coding/4/ HTTP/1.1" 200 19122
+[2024-02-29 16:39:41] INFO /Users/beomtaehyeon/Documents/GitHub_Clon/pyblog_ubuntu/myapp/coding/views.py changed, reloading.
+[2024-02-29 16:39:41] INFO Watching for file changes with StatReloader
+[2024-02-29 16:41:07] INFO /Users/beomtaehyeon/Documents/GitHub_Clon/pyblog_ubuntu/myapp/coding/views.py changed, reloading.
+[2024-02-29 16:41:07] INFO Watching for file changes with StatReloader
+[2024-02-29 16:48:53] INFO "GET /coding/4/ HTTP/1.1" 200 21121
+[2024-02-29 16:49:14] INFO "GET /blogs/ HTTP/1.1" 200 17805
+[2024-02-29 16:49:16] INFO SELECT `py_blog`.`id`, `py_blog`.`title`, `py_blog`.`update_dt`, `py_blog`.`regist_dt`, `py_blog`.`use_yn` FROM `py_blog` WHERE (`py_blog`.`id` = 3 AND `py_blog`.`use_yn` = Y)
+[2024-02-29 16:49:16] INFO "GET /blog/3 HTTP/1.1" 200 20501
+[2024-02-29 16:50:36] INFO SELECT `py_blog`.`id`, `py_blog`.`title`, `py_blog`.`update_dt`, `py_blog`.`regist_dt`, `py_blog`.`use_yn` FROM `py_blog` WHERE (`py_blog`.`id` = 3 AND `py_blog`.`use_yn` = Y)
+[2024-02-29 16:50:36] INFO "GET /blog/3 HTTP/1.1" 200 20719
+[2024-02-29 16:50:46] ERROR Internal Server Error: /blog/2
+Traceback (most recent call last):
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/views/generic/list.py", line 174, in get
+    context = self.get_context_data()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/beomtaehyeon/Documents/GitHub_Clon/pyblog_ubuntu/myapp/blog/views.py", line 31, in get_context_data
+    context['pageInfo'] = query_set[0]
+                          ~~~~~~~~~^^^
+  File "/Users/beomtaehyeon/miniforge3/envs/pyblog/lib/python3.12/site-packages/django/db/models/query.py", line 446, in __getitem__
+    return qs._result_cache[0]
+           ~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+[2024-02-29 16:50:46] ERROR "GET /blog/2 HTTP/1.1" 500 93751
+[2024-02-29 16:50:53] INFO "GET /coding/2/ HTTP/1.1" 200 21356
+[2024-02-29 16:50:55] INFO "GET /coding/2/ HTTP/1.1" 200 21355
+[2024-02-29 16:50:57] INFO "GET /coding/4/ HTTP/1.1" 200 21338

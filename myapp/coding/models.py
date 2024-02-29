@@ -8,6 +8,7 @@ from django.utils.functional import cached_property
 # Create your models here.
 
 IMG_SIZE_CHOICES = [(30, '30%'), (40, '40%'), (50, '50%'), (70, '70%'), (100, '100%')]
+USE_YN_CHOICES = (("Y", "Yes"), ("N", "No"))
 
 class PyCoding(MP_Node):
     id = models.AutoField(primary_key=True)
@@ -20,6 +21,7 @@ class PyCoding(MP_Node):
     content_body = MarkdownxField()
     update_dt = models.DateTimeField(auto_now=True)
     regist_dt = models.DateTimeField(auto_now_add=False)
+    use_yn = models.CharField(max_length=1, default='Y', choices=USE_YN_CHOICES)
     
     node_order_by = ['regist_dt']
     

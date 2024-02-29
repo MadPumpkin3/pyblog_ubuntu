@@ -17,10 +17,10 @@ class containPythonBlog(admin.StackedInline):
     }
     
 class admin_pythonblog(admin.ModelAdmin):
-    list_display = ('id', 'title', 'regist_dt', 'update_dt')
+    list_display = ('id', 'title', 'use_yn', 'regist_dt', 'update_dt')
     
     fieldsets = [
-        (None, { 'fields': ['title'] }),
+        (None, { 'fields': ['title', 'use_yn'] }),
     ]
     inlines = [ containPythonBlog ]
     

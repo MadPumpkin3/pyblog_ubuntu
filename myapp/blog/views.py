@@ -27,7 +27,7 @@ class blogDetail(blogList, generic.View):
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        query_set = PyBlog.objects.filter(id=self.kwargs['pk'])
+        query_set = PyBlog.objects.filter(id=self.kwargs['pk'], use_yn = 'Y')
         context['pageInfo'] = query_set[0]
         log.info(query_set.query)
         query_set = query_set.values('id', 'title', 'update_dt', 'regist_dt', 

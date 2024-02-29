@@ -1,3 +1,11 @@
+$(document).ready(function() {
+    $('#mail_pop_link').click(function(e) {
+        e.preventDefault(); // 기본 동작 중단
+        $('#mail_pop').modal('show'); // 모달 열기
+    });
+});
+
+
 function fn_sendmail(){
     var wordForm = new FormData();
     wordForm.append('csrfmiddlewaretoken', document.mailForm.csrfmiddlewaretoken.value);
